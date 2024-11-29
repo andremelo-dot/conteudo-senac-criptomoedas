@@ -1,0 +1,60 @@
+.tooltip-link {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+// PARA FUNCIONAR EM FUNDOS CLAROS
+[data-tippy-theme='light'] {
+  --tip-background: unset;
+  --tip-color: var(--primary-color-3);
+  --tip-padding: 0px 4px;
+
+  background: var(--tip-background);
+  color: var(--tip-color);
+  padding: var(--tip-padding);
+  font-weight: bold;
+}
+
+// PARA FUNCIONAR EM FUNDOS ESCUROS
+[data-tippy-theme='dark'] {
+  --tip-background: unset;
+  --tip-color: var(--primary-color-2);
+  --tip-padding: 0px 4px;
+
+  background: var(--tip-background);
+  color: var(--tip-color);
+  padding: var(--tip-padding);
+  font-weight: bold;
+}
+
+.tippy-box[data-theme='light'] {
+  --tip-background: var(--primary-color-3);
+  --tip-color: #fff;
+  --tip-padding: 12px;
+
+  background: var(--tip-background);
+  color: var(--tip-color);
+  padding: var(--tip-padding);
+
+  .tippy-arrow {
+    &::before {
+      color: var(--tip-background);
+    }
+  }
+}
+
+.tippy-box[data-theme='dark'] {
+  --tip-background: var(--primary-color-2);
+  --tip-color: #fff
+  --tip-padding: 12px;
+
+  background: var(--tip-background);
+  color: var(--tip-color);
+  padding: var(--tip-padding);
+
+  .tippy-arrow {
+    &::before {
+      color: var(--tip-background);
+    }
+  }
+}

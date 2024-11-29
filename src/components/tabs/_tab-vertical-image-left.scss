@@ -1,0 +1,117 @@
+.tab-ver-image-left {
+  --tab-ver-row-height: 75px;
+  --tab-columns: 232px 1fr;
+  --tab-gap: 0;
+  --tab-link-padding: 16px 24px;
+  --tab-content-gap: 56px;
+  --tab-content-border: 0;
+  --tab-content-margin-top: 0;
+  --tab-content-padding: 16px 32px;
+  --tab-content-radius: 0;
+  --tab-content-min-height: 300px;
+  --tab-content-direction: row;
+
+  min-height: var(--tab-content-min-height);
+  display: grid;
+  grid-template-columns: var(--tab-columns);
+  grid-template-rows: var(--tab-ver-template-rows);
+  row-gap: var(--tab-gap);
+
+  &__link {
+    grid-column: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--tab-link-background);
+    color: var(--tab-link-color);
+    padding: var(--tab-link-padding);
+    text-align: center;
+    // font-size: px-to-rem($p-font-size);
+    // line-height: px-to-rem($p-line-height);
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &.is-active {
+      background: var(--tab-link-background-active);
+      color: var(--tab-link-color-active);
+    }
+
+    &.clicked:not(.is-active) {
+      background: var(--tab-link-background-viewed);
+      color: var(--tab-link-color-viewed);
+    }
+  }
+
+  &__content {
+    position: relative;
+    border-radius: var(--tab-content-radius);
+    grid-column: 2;
+    grid-row: 1 / -1;
+    padding: var(--tab-content-padding);
+
+    background: var(--tab-content-background);
+    border: var(--tab-content-border);
+    margin-top: var(--tab-content-margin-top);
+    animation: 0.2s slideOutTop ease-in;
+    z-index: -1;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: var(--tab-content-direction);
+    gap: var(--tab-content-gap);
+
+    img {
+      max-width: 320px;
+    }
+
+    &.is-active {
+      opacity: 1;
+      animation: 0.6s slideInTop ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .tab-ver-image-left {
+    --tab-link-padding: 8px 16px;
+    --tab-content-padding: 8px 16px;
+    --tab-content-direction: column;
+    --tab-content-gap: 16px;
+
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+
+    &__link {
+      grid-template-rows: unset;
+      transition: unset;
+
+      &.is-active {
+        width: 100%;
+      }
+
+      &[data-nav-id='1'],
+      &[data-nav-id='2'],
+      &[data-nav-id='3'],
+      &[data-nav-id='4'] {
+        grid-column: unset;
+      }
+    }
+
+    &__content {
+      min-height: unset;
+      display: none;
+      grid-column: unset;
+      grid-row: unset;
+      position: relative;
+      inset: unset;
+
+      &.is-active {
+        display: flex;
+      }
+    }
+  }
+}

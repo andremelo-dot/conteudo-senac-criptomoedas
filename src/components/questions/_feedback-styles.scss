@@ -1,0 +1,163 @@
+// NÃO MODIFICAR AQUI
+:where(.question) {
+  &[data-progress='0'][data-status='0'] {
+    .feedback-complete {
+      display: none;
+    }
+  }
+}
+// **************************
+
+// NÃO MODIFICAR AQUI
+:where(.question) {
+  &[data-progress='1'] {
+    &[data-status='1'] .feedback-incomplete,
+    &[data-status='0'] .feedback-incomplete {
+      display: none;
+    }
+  }
+}
+// **************************
+
+// NÃO MODIFICAR AQUI
+:where(.question) {
+  .question-feedback:not(.is-active) {
+    display: none;
+  }
+  .question-feedback img {
+    width: auto;
+  }
+  .feedback-complete__text {
+    gap: 24px;
+    &, &>div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+// **************************
+
+// MODIFICAR O BOTÃO DE FECHAR FEEDBACK AQUI
+.question-btn[data-type='close'] {
+  --feedback-close: url(/assets/images/wireframe/wireframe-feed-close.svg);
+  --feedback-close-width: 22px;
+  --feedback-close-height: 22px;
+
+  background: #000;
+  mask-image: var(--feedback-close);
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  width: var(--feedback-close-width);
+  height: var(--feedback-close-height);
+  border: 0;
+  display: block;
+  margin-left: auto;
+}
+
+// PRIMEIRA TENTATIVA
+:where(.question[data-progress='0'][data-status='0']) {
+  --feedback-background: var(--feedback-first-try);
+  --feedback-padding: 32px;
+  --feedback-max-width: 100%;
+
+  .feedback-incomplete {
+    position: relative;
+    background: var(--feedback-background);
+    padding: var(--feedback-padding);
+    max-width: var(--feedback-max-width);
+
+    .question-btn[data-type='close'] {
+      // position: absolute;
+      // top: 10px;
+      // right: 10px;
+    }
+  }
+}
+
+// ÚLTIMA TENTATIVA
+:where(.question[data-progress='1'][data-status='0']) {
+  --feedback-background: var(--feedback-incorrect);
+  --feedback-padding: 32px;
+  --feedback-max-width: 100%;
+
+  .feedback-complete {
+    // --feedback-title-color: #F93549;
+    position: relative;
+    background: var(--feedback-background);
+    padding: var(--feedback-padding);
+    max-width: var(--feedback-max-width);
+
+    .feedback-title {
+      color: var(--feedback-title-color);
+    }
+
+    .question-btn[data-type='close'] {
+      // position: absolute;
+      // top: 10px;
+      // right: 10px;
+    }
+  }
+}
+
+// FEEDBACK CORRETO
+:where(.question[data-progress='1'][data-status='1']) {
+  --feedback-background: var(--feedback-correct);
+  --feedback-padding: 32px;
+  --feedback-max-width: 100%;
+
+  .feedback-complete {
+    position: relative;
+    background: var(--feedback-background);
+    padding: var(--feedback-padding);
+    max-width: var(--feedback-max-width);
+
+    .feedback-title {
+      color: var(--feedback-title-color);
+    }
+
+    .question-btn[data-type='close'] {
+      // position: absolute;
+      // top: 10px;
+      // right: 10px;
+    }
+  }
+}
+
+// CASO O FEEDBACK SEJA NECESSÁRIO ESTAR COMO 'POP-UP', ACIMA DA QUESTÃO, USAR A CLASSE ABAIXO NA DIV .question
+// BASTA ALTERAR OS AGORA O TAMANHO DOS FEEDBACKS, SE NECESSÁRIO.
+.question-popup {
+  position: relative;
+
+  .question-feedback {
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.is-active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  :is(.feedback-complete, .feedback-incomplete) {
+    --feedback-max-width: 640px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  :where(.question) {
+    .feedback-complete__text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

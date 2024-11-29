@@ -1,0 +1,109 @@
+// @import '@styles/base/reset';
+@import '@styles/base/grid';
+@import '@styles/base/helpers';
+@import '@styles/base/animations';
+
+// WIREFRAME STYLES / VARIABLES
+@import '@styles/wireframe';
+@import '@styles/variables';
+
+// DEFAULT STYLES
+@import '@styles/default-styles';
+@import '@styles/e-learning';
+
+// MIXINS
+@import '@styles/mixins';
+
+// COMPONENTS
+@import '@components/header/header-custom'; // Cabeçalho 1
+
+// @import '@components/medias/video/video'; // Vídeo
+
+@import '@components/medias/audio/podcast'; // Podcast 01
+@import '@components/medias/audio/podcast-02'; // Podcast 02
+
+@import '@components/menu/styles';
+@import '@components/menu/menu-01'; // menu fixo 01
+@import '@components/menu/menu-02'; // menu fixo 02
+@import '@components/menu/menu-03'; // menu fixo 03
+
+@import '@components/buttons/styles';
+@import '@components/navigation/styles';
+
+// RECURSOS ESTÁTICOS
+@import '@components/statics/img-max-right'; // imagem lateral máxima direita
+@import '@components/statics/img-max-left'; // imagem lateral máxima esquerda
+
+@import '@components/statics/ilu-max-right'; // ilustração lateral máxima direita
+@import '@components/statics/ilu-max-left'; // ilustração lateral máxima esquerda
+
+@import '@components/statics/ico-min-right'; // ícone lateral mínima direita
+@import '@components/statics/ico-min-left'; // ícone lateral mínima esquerda
+
+@import '@components/statics/ico-top-text'; // icone acima texto abaixo
+@import '@components/statics/ico-left-text'; // icone esquerda texto lado
+@import '@components/statics/ico-right-text'; // icone direita texto lado
+@import '@components/statics/featured'; // destaque
+@import '@components/statics/download'; // download
+
+// TABELA
+@import '@components/table/table';
+
+// RECURSOS INTERATIVOS
+@import '@components/accordion/accordion-simp'; // accordion simples
+
+@import '@components/card/flashcard-image'; // flashcard imagens
+@import '@components/card/flashcard-ico'; // flashcard ícones
+@import '@components/card/flashcard-image-full'; // flashcard imagem inteira
+
+@import '@components/slideshow/slider-styles';
+@import '@components/slideshow/slider-image-top'; // slider imagem top
+@import '@components/slideshow/slider-image-left'; // slider imagem esquerda
+@import '@components/slideshow/slider-image-right'; // slider imagem direita
+
+@import '@components/slideshow/carrossel-text'; // carrossel só texto
+@import '@components/slideshow/carrossel-image-left'; // carrossel imagem esquerda
+@import '@components/slideshow/carrossel-image-right'; // carrossel imagem direita
+@import '@components/slideshow/carrossel-image-top'; // carrossel imagem top
+
+@import '@components/tabs/tab-styles';
+@import '@components/tabs/tab-horizontal-text'; // tab horizontal só texto
+@import '@components/tabs/tab-vertical-text'; // tab vertical só texto
+
+@import '@components/drop-content/drop-content-styles';
+@import '@components/drop-content/drop-content-top'; // drop content top
+@import '@components/drop-content/drop-content-down'; // drop content down
+@import '@components/drop-content/drop-content-left'; // drop content left
+@import '@components/drop-content/drop-content-right'; // drop content right
+
+@import '@components/timeline-custom/styles';
+
+// ATIVIDADES
+@import '@components/questions/styles.scss';
+@import '@components/questions/feedback-styles.scss';
+@import '@components/question-objective/styles.scss';
+@import '@components/question-select/styles.scss';
+@import '@components/question-discursive/styles.scss';
+@import '@components/question-drag-and-drop/styles.scss';
+@import '@components/question-multiple/styles.scss';
+@import '@components/question-minmax/styles.scss';
+@import '@components/question-associative/styles.scss';
+
+@import '@components/educationals/styles.scss';
+@import '@components/educationals/various.scss';
+@import '@components/educationals/educational-01.scss';
+@import '@components/educationals/educational-02.scss';
+@import '@components/educationals/educational-03.scss';
+@import '@components/educationals/educational-04.scss';
+@import '@components/educationals/educational-05.scss';
+@import '@components/educationals/educational-06.scss';
+@import '@components/educationals/educational-07.scss';
+@import '@components/educationals/educational-08.scss';
+@import '@components/educationals/educational-09.scss';
+@import '@components/educationals/educational-10.scss';
+@import '@components/educationals/educational-11.scss';
+@import '@components/educationals/educational-12.scss';
+@import '@components/educationals/educational-13.scss';
+@import '@components/educationals/educational-14.scss';
+@import '@components/educationals/educational-15.scss';
+@import '@components/educationals/educational-16.scss';

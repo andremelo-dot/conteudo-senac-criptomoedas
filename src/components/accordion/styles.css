@@ -1,0 +1,21 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion .accordion-item {
+  cursor: pointer;
+}
+
+.accordion .accordion-summary {
+  position: relative;
+  user-select: none;
+}
+
+.accordion .accordion-summary::marker {
+  content: "";
+}
+
+.accordion .accordion-summary>* {
+  display: inline-flex;
+}

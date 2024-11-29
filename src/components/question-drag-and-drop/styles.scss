@@ -1,0 +1,65 @@
+.question[data-type='drag-and-drop'] {
+  --question-content-gap: 32px;
+
+  --question-draggable-content-gap: 28px;
+
+  --question-draggable-width: 288px;
+  --question-draggable-height: 80px;
+  --question-draggable-background: #bcbcbc;
+  --question-draggable-padding: 8px;
+  --question-draggable-direction: row;
+
+  --question-droppable-background: #ffffff;
+  --question-droppable-container-gap: 8px;
+
+  .question-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--question-content-gap);
+  }
+
+  .draggable-content,
+  .droppable-content {
+    display: flex;
+    flex-direction: var(--question-draggable-direction);
+    gap: var(--question-draggable-content-gap);
+  }
+
+  .droppable-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--question-droppable-container-gap);
+  }
+
+  .draggable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--question-draggable-background);
+    width: var(--question-draggable-width);
+    height: var(--question-draggable-height);
+    padding: var(--question-draggable-padding);
+    cursor: grab;
+  }
+
+  .droppable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--question-draggable-width);
+    height: var(--question-draggable-height);
+    background: var(--question-droppable-background);
+    padding: var(--question-draggable-padding);
+  }
+}
+
+@media (max-width: 816px) {
+  .question[data-type='drag-and-drop'] {
+    --question-content-gap: 24px;
+    --question-draggable-content-gap: 12px;
+    --question-draggable-direction: column;
+  }
+}

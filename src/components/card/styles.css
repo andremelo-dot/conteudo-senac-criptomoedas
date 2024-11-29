@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.card>div {
+  height: 415px;
+}
+
+.card .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: transform 300ms ease;
+  transform: translateY(100%);
+}
+
+.card.is-active .card-back {
+  transform: translateY(0);
+}
+
+.card .card-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  height: 40px;
+  border: unset;
+  cursor: pointer;
+}

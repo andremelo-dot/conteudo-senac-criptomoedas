@@ -1,0 +1,118 @@
+$menu-h1-font-size: 24px;
+$menu-h1-line-height: 32px;
+
+$heading-font-size: 24px;
+$heading-line-height: 32px;
+
+.menu-01 {
+  --menu-content-background: #ffffff;
+  --menu-content-border: 2px solid #282828;
+  --menu-content-radius: 20px;
+  --menu-content-max-width: 606px;
+  --menu-content-padding: 48px 24px;
+  --menu-topic-border: 1px solid var(--secondary);
+  --menu-topic-color: #353535;
+  --menu-topic-color-hover: #000000;
+  --menu-topic-opacity-disabled: 0.3;
+
+  max-width: 1920px;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+  isolation: isolate;
+
+  &__content {
+    position: fixed;
+    top: 20px;
+    right: 200px;
+    transform: translateX(400%);
+    width: 100%;
+    max-width: var(--menu-content-max-width);
+    background: var(--menu-content-background);
+    border: var(--menu-content-border);
+    border-radius: var(--menu-content-radius);
+    padding: var(--menu-content-padding);
+    transition: transform 600ms ease;
+
+    h1 {
+      font-size: px-to-rem($menu-h1-font-size);
+      line-height: px-to-rem($menu-h1-line-height);
+      margin-bottom: 32px;
+    }
+
+    &.is-active {
+      transform: translateX(0);
+    }
+
+    .topic {
+      padding-bottom: 8px;
+      font-size: px-to-rem($heading-font-size);
+      line-height: px-to-rem($heading-line-height);
+      border-bottom: var(--menu-topic-border);
+      font-weight: 700;
+      cursor: pointer;
+
+      * {
+        color: var(--menu-topic-color);
+      }
+
+      &:hover {
+        * {
+          color: var(--menu-topic-color-hover);
+        }
+      }
+
+      &.disabled {
+        opacity: var(--menu-topic-opacity-disabled);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  $menu-h1-font-size: 20px;
+  $menu-h1-line-height: 28px;
+
+  $heading-font-size: 20px;
+  $heading-line-height: 28px;
+
+  .menu-01 {
+    .open-menu {
+      margin-left: unset;
+      margin-right: unset;
+      margin-inline: auto;
+      font-size: px-to-rem($menu-h1-font-size);
+      line-height: px-to-rem($menu-h1-line-height);
+    }
+
+    &__content {
+      top: 100px;
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, -400%);
+      max-width: calc(100% - 32px);
+
+      &.is-active {
+        transform: translate(-50%, 0%);
+      }
+    }
+
+    h1 {
+      font-size: px-to-rem($menu-h1-font-size);
+      line-height: px-to-rem($menu-h1-line-height);
+    }
+
+    .topic {
+      font-size: px-to-rem($heading-font-size);
+      line-height: px-to-rem($heading-line-height);
+    }
+  }
+}

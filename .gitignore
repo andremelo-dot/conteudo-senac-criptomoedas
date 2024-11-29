@@ -1,0 +1,4 @@
+node_modules
+dist/course
+.vscode/*
+*.zip

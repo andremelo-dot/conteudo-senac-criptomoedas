@@ -1,0 +1,10 @@
+.section:not(.is-active) {
+  display: none;
+}
+
+:where(.section:first-of-type .navigation .navigation-prev),
+:where(.section:last-of-type .navigation .navigation-next) {
+  opacity: 0.75;
+  pointer-events: none;
+  user-select: none;
+}

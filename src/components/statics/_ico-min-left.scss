@@ -1,0 +1,38 @@
+.ico-min-left {
+  --static-image-max-width: auto;
+  --static-content-max-width: auto;
+  --static-direction: row;
+  --static-gap: 32px;
+
+  .content-grid {
+    display: flex;
+    align-items: center;
+    flex-direction: var(--static-direction);
+    gap: var(--static-gap);
+  }
+
+  picture {
+    margin-inline: auto;
+    flex: none;
+  }
+
+  img {
+    max-width: var(--static-image-max-width);
+  }
+
+  &__content {
+    max-width: var(--static-content-max-width);
+  }
+}
+
+@media (max-width: 816px) {
+  .ico-min-left {
+    --static-direction: column;
+    --static-content-max-width: 100%;
+    --static-image-max-width: 100%;
+
+    .content-grid {
+      align-items: flex-start;
+    }
+  }
+}

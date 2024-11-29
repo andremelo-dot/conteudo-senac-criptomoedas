@@ -1,0 +1,113 @@
+.image-comparison {
+  position: relative;
+  max-width: 100%;
+  max-height: fit-content;
+  overflow: hidden;
+
+  --image-comparison-slider-bar-width: 8px;
+  --image-comparison-slider-bar-background: #eaeaea;
+  --image-comparison-slider-background-image: url('/assets/images/ico/ico-image-comparison-slider.svg');
+  --image-comparison-slider-background: #eaeaea;
+  --image-comparison-position: 50%;
+}
+
+.image-comparison::after {
+  content: '';
+  position: absolute;
+  width: var(--image-comparison-slider-bar-width);
+  height: 100%;
+  background-color: var(--image-comparison-slider-bar-background);
+  top: 50%;
+  left: var(--image-comparison-position);
+  transform: translate(-50%, -50%);
+}
+
+.image-comparison .image-compare:first-of-type {
+  position: absolute;
+  inset: 0;
+  width: var(--image-comparison-position);
+}
+
+.image-comparison .image-compare > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-comparison .image-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  background-color: transparent;
+  inset: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.image-comparison .image-input::-webkit-slider-runnable-track,
+.image-comparison .image-input::-moz-range-track {
+  background: transparent;
+}
+
+.image-comparison .image-input::-webkit-slider-thumb {
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+}
+
+.image-comparison .image-input::-moz-range-thumb {
+  appearance: none;
+  opacity: 0;
+}
+
+.image-comparison .image-slider {
+  position: absolute;
+  width: 56px;
+  height: 48px;
+  background: var(--image-comparison-slider-background-image) center no-repeat;
+  background-size: 70%;
+  background-color: var(--image-comparison-slider-background);
+  border: none;
+  top: 50%;
+  left: var(--image-comparison-position);
+  transform: translate(-50%, -50%);
+  cursor: w-resize;
+  z-index: 5;
+}
+
+@media screen and (max-width: 411.98px) {
+  .image-comparison {
+    --image-comparison-slider-bar-width: 4px;
+  }
+
+  .image-comparison::after {
+    width: 100%;
+    height: var(--image-comparison-slider-bar-width);
+    top: var(--image-comparison-position);
+    left: 50%;
+  }
+
+  .image-comparison .image-compare:first-of-type {
+    width: 100%;
+    height: var(--image-comparison-position);
+  }
+
+  .image-comparison .image-compare > img {
+    object-position: top;
+  }
+
+  .image-comparison .image-input {
+    appearance: slider-vertical;
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+
+  .image-comparison .image-slider {
+    top: var(--image-comparison-position);
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}

@@ -1,0 +1,9 @@
+.swiper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.swiper .swiper-pagination {
+  width: fit-content;
+}

@@ -1,0 +1,42 @@
+@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+    [data-animate] {
+        opacity: 0;
+        visibility: hidden;
+        transition-duration: .5s;
+        transition-delay: .1s;
+        transition-property: opacity, visibility, transform, -webkit-transform;
+        transition-timing-function: ease-in-out;
+        will-change: transform;
+    }
+
+    [data-animate].is-active {
+        opacity: 1;
+        visibility: visible;
+        transform: initial;
+    }
+
+    [data-animate=fade-in] {
+        transform: translate3d(0, 0, 0);
+    }
+
+    [data-animate=up] {
+        transform: translate3d(0, -50px, 0);
+    }
+
+    [data-animate=down] {
+        transform: translate3d(0, 50px, 0);
+    }
+
+    [data-animate=left] {
+        transform: translate3d(-50px, 0, 0);
+    }
+
+    [data-animate=right] {
+        transform: translate3d(50px, 0, 0);
+    }
+
+    [data-animate=zoom] {
+        transform: scale(0);
+        transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+    }
+}

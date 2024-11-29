@@ -1,0 +1,19 @@
+.featured-download {
+  --featured-download-bg-color: var(--primary-color-3);
+  &__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  &__content {
+    box-shadow: 0px 4px 6px rgba(0,0,0,.3);
+    padding: 40px;
+    background: var(--featured-download-bg-color);
+    color: #fff;
+  }
+  &__button {
+    display: flex;
+    max-width: max-content;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,241 @@
+// ESTILO DO PODCAST 2
+.podcast-02 {
+  // PLYR AUDIO CONFIGS
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-color: #ffffff;
+  --plyr-audio-progress-buffered-background: #ffffff;
+  --plyr-timer-color: var(--wireframe-black);
+
+  // PLYR PODCAST02 GUIDE CONFIGS
+  --plyr-maxwidth: 464px;
+  --plyr-background: #dddddd;
+
+  --plyr-wrapper-maxwidth: 1024px;
+  --plyr-image-maxwidth: 328px;
+
+  --plyr-content-gap: 16px;
+  --plyr-content-minheight: 224px;
+  --plyr-content-padding: 0 16px 0 0;
+
+  --plyr-subtitles-maxwidth: 1024px;
+  --plyr-subtitles-background: #bcbcbc;
+  --plyr-subtitles-padding: 56px 40px 32px 40px;
+  --plyr-subtitles-maxheight: 76px;
+  --plyr-subtitles-button-background: #bcbcbc;
+  --plyr-subtitles-background: #dddddd;
+  --plyr-subtitles-arrow-background: url(/assets/images/plyr/plyr-arrow-subtitle.svg);
+  --plyr-subtitles-arrow-width: 24px;
+  --plyr-subtitles-arrow-height: 8px;
+  --plyr-subtitles-block: 12px;
+  --plyr-subtitles-inline: 8px;
+  --plyr-subtitles-gap: 8px;
+  --plyr-subtitles-scroll-background: #ffffff;
+  --plyr-subtitles-scroll-background-thumb: #d3d3d3;
+
+  .podcast-wrapper {
+    max-width: var(--plyr-wrapper-maxwidth);
+
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    align-items: flex-end;
+    background: transparent;
+
+    .podcast-image {
+      width: 100%;
+      max-width: var(--plyr-image-maxwidth);
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .podcast-content {
+      position: relative;
+      width: 100%;
+      background: var(--plyr-background);
+      gap: var(--plyr-content-gap);
+      min-height: var(--plyr-content-minheight);
+      padding: var(--plyr-content-padding);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .podcast {
+        display: flex;
+        width: 100%;
+        max-width: var(--plyr-maxwidth);
+        gap: 8px;
+
+        .plyr {
+          max-width: var(--plyr-podcast1-audio-maxwidth);
+          width: 100%;
+
+          &__controls {
+            [data-plyr='play'] {
+              background: var(--plyr-control-audio-play-background);
+              width: var(--plyr-control-audio-play-width);
+              height: var(--plyr-control-audio-play-height);
+
+              &[aria-pressed='true'] {
+                --plyr-control-audio-play-background: url(/assets/images/plyr/plyr-audio-pause.svg) center / cover no-repeat;
+              }
+
+              &:hover {
+                background: var(--plyr-control-audio-play-background);
+                filter: brightness(105%);
+              }
+            }
+
+            [data-plyr='mute'] {
+              background: var(--plyr-control-audio-volume-background);
+              width: var(--plyr-control-audio-volume-width);
+              height: var(--plyr-control-audio-volume-height);
+
+              &[aria-pressed='true'] {
+                --plyr-control-audio-volume-background: url(/assets/images/plyr/plyr-audio-mute.svg) center / cover no-repeat;
+              }
+
+              &:hover {
+                background: var(--plyr-control-audio-volume-background);
+                filter: brightness(105%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .podcast-subtitles {
+    width: 100%;
+    max-width: var(--plyr-subtitles-maxwidth);
+    background: var(--plyr-subtitles-background);
+    padding: var(--plyr-subtitles-padding);
+    margin-inline: auto;
+    margin-top: 2px;
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    &__wrapper {
+      margin-inline: auto;
+
+      .subtitles {
+        overflow-y: scroll;
+        max-height: var(--plyr-subtitles-maxheight);
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: var(--plyr-subtitles-scroll-background);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--plyr-subtitles-scroll-background-thumb);
+        }
+      }
+    }
+  }
+
+  .handle-transcription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--plyr-subtitles-inline);
+    min-height: var(--plyr-control-audio-play-height);
+    gap: var(--plyr-subtitles-gap);
+    background: var(--plyr-subtitles-button-background);
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+
+    &.is-active {
+      &::before {
+        transform: scaleY(-1);
+      }
+    }
+
+    &::before {
+      content: '';
+      background: var(--wireframe-black);
+      mask-image: var(--plyr-subtitles-arrow-background);
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      width: var(--plyr-subtitles-arrow-width);
+      height: var(--plyr-subtitles-arrow-height);
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  // ESTILO DO PODCAST 2
+  .podcast-02 {
+    --plyr-control-audio-play-width: 32px;
+    --plyr-control-audio-play-height: 32px;
+    --plyr-control-audio-volume-width: 32px;
+    --plyr-control-audio-volume-height: 32px;
+
+    --plyr-subtitles-block: 8px;
+    --plyr-subtitles-inline: 8px;
+    --plyr-subtitles-gap: 4px;
+    --plyr-subtitles-arrow-width: 20px;
+    --plyr-subtitles-arrow-height: 8px;
+    --plyr-subtitles-maxwidth: 652px;
+    --plyr-subtitles-maxheight: 76px;
+    --plyr-subtitles-padding: 32px 16px 20px 16px;
+
+    --plyr-wrapper-maxwidth: 652px;
+    --plyr-image-maxwidth: 328px;
+
+    --plyr-content-minheight: 117px;
+    --plyr-content-padding: 16px 16px 32px 16px;
+
+    .podcast-wrapper {
+      flex-direction: column;
+      margin-inline: auto;
+
+      .podcast-image {
+        background: #d3d3d3;
+        max-width: 1024px;
+        width: 100%;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 150px;
+        }
+      }
+
+      .podcast-content {
+        align-items: center;
+        justify-content: center;
+
+        .podcast {
+          justify-content: center;
+        }
+
+        .handle-transcription {
+          bottom: -18px;
+        }
+      }
+    }
+
+    .podcast-subtitles {
+      margin-top: 2px;
+
+      &__wrapper {
+        margin-inline: auto;
+      }
+    }
+  }
+}

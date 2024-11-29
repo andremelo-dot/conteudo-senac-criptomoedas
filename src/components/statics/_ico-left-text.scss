@@ -1,0 +1,33 @@
+.ico-left-text {
+  --static-background: #bcbcbc;
+  --static-gap: 54px;
+  --static-ico-max-width: 208px;
+  --static-inline: 24px;
+  --static-block: 40px;
+  --static-direction: row;
+
+  .content-grid {
+    background: var(--static-background);
+    margin-top: calc(var(--section-spacing) + var(--static-ico-min-width) * -1);
+
+    display: flex;
+    flex-direction: var(--static-direction);
+    gap: var(--static-gap);
+    padding-inline: var(--static-inline);
+    padding-block: var(--static-block);
+
+    img {
+      margin-inline: auto;
+      max-width: var(--static-ico-max-width);
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .ico-left-text {
+    --static-inline: 16px;
+    --static-block: 20px;
+    --static-gap: 28px;
+    --static-direction: column;
+  }
+}

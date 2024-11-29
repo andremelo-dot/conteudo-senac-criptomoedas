@@ -1,0 +1,118 @@
+.tab-hor-image-top {
+  --tab-columns: repeat(auto-fill, minmax(256px, 1fr));
+  --tab-gap: 0;
+  --tab-link-padding: 16px 24px;
+  --tab-content-border: 0;
+  --tab-content-margin-top: 0;
+  --tab-content-padding: 24px 56px;
+  --tab-content-radius: 0;
+  --tab-content-direction: column;
+  --tab-content-gap: 16px;
+
+  display: grid;
+  grid-template-columns: var(--tab-columns);
+  grid-template-rows: auto 1fr;
+  grid-column-gap: var(--tab-gap);
+  position: relative;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tab-link-background);
+    color: var(--tab-link-color);
+    padding: var(--tab-link-padding);
+    font-size: px-to-rem($p-font-size);
+    line-height: px-to-rem($p-line-height);
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    grid-row: 1;
+    cursor: pointer;
+
+    &.is-active {
+      background: var(--tab-link-background-active);
+      color: var(--tab-link-color-active);
+    }
+
+    &.clicked:not(.is-active) {
+      background: var(--tab-link-background-viewed);
+      color: var(--tab-link-color-viewed);
+    }
+
+    &[data-nav-id='1'] {
+      grid-column: 1;
+    }
+
+    &[data-nav-id='2'] {
+      grid-column: 2;
+    }
+
+    &[data-nav-id='3'] {
+      grid-column: 3;
+    }
+
+    &[data-nav-id='4'] {
+      grid-column: 4;
+    }
+  }
+
+  &__content {
+    position: relative;
+    border-radius: var(--tab-content-radius);
+    grid-column: 1 / 5;
+    grid-row: 2;
+    padding: var(--tab-content-padding);
+
+    background: var(--tab-content-background);
+    border: var(--tab-content-border);
+    margin-top: var(--tab-content-margin-top);
+    animation: 0.2s slideOutTop ease-in;
+    z-index: -1;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: var(--tab-content-direction);
+    gap: var(--tab-content-gap);
+    align-items: center;
+
+    &.is-active {
+      opacity: 1;
+      animation: 0.6s slideInTop ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .tab-hor-image-top {
+    --tab-link-padding: 8px 16px;
+    --tab-content-padding: 8px 16px;
+    --tab-content-direction: column;
+    --tab-content-gap: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    &__link {
+      grid-template-rows: unset;
+      transition: unset;
+
+      &[data-nav-id='1'],
+      &[data-nav-id='2'],
+      &[data-nav-id='3'],
+      &[data-nav-id='4'] {
+        grid-column: unset;
+      }
+    }
+
+    &__content {
+      display: none;
+      grid-column: unset;
+      grid-row: unset;
+
+      &.is-active {
+        display: flex;
+      }
+    }
+  }
+}

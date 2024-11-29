@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url(/assets/fonts/Nunito-SemiBold.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campuni';
+  src: url(/assets/fonts/Campuni-Black.woff) format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(/assets/fonts/Nunito-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campuni';
+  src: url(/assets/fonts/Campuni-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campuni';
+  src: url(/assets/fonts/Campuni-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(/assets/fonts/Nunito-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url(/assets/fonts/MinionPro-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(/assets/fonts/Nunito-BoldItalic.woff) format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(/assets/fonts/Nunito-Italic.woff) format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'OCR A Extended';
+  src: url(/assets/fonts/OCRAExtended.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

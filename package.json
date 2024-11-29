@@ -1,0 +1,36 @@
+{
+  "name": "project-lego",
+  "description": "O Projeto LEGO é o framework front-end modular do DOT Digital Group. Responsável por fornecer os componentes necessários para o desenvolvimento de e-learnings de forma rápida e segura.",
+  "author": "Glauber Albuquerque",
+  "private": true,
+  "version": "0.5.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "git-cliff": "^2.7.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.1",
+    "terser": "^5.16.2",
+    "vite": "^4.0.0",
+	"zip-lib": "^1.0.4"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "swiper": "^11.0.7",
+    "tippy.js": "^6.3.7",
+    "vidstack": "^1.11.22"
+  }
+}

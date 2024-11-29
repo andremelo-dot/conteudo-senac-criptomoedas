@@ -1,0 +1,53 @@
+.educational {
+  --gradient-direction: to right;
+  .content-grid {
+    display: flex;
+    row-gap: 16px;
+    padding-block: 32px;
+  }
+  [class*=__title] {
+    margin-top: unset;
+    color: var(--terciary-color-3);
+    &+p {
+      margin-top: 1rem;
+    }
+  }
+  [class*=__content] {
+    position: relative;
+    padding-inline: 32px;
+  }
+  img, picture {
+    flex:none;
+  }
+}
+
+.fica-dica {
+  .content-grid {
+    background: linear-gradient(var(--gradient-direction), transparent 0 125px, var(--primary-color-2) 125px 100%);
+  }
+}
+
+.zoom-no-tema {
+  .content-grid {
+    background: linear-gradient(var(--gradient-direction), transparent 0 110px, var(--secondary-color-1) 110px 100%);
+  }
+}
+
+.link-da-questao {
+  .content-grid {
+    background: linear-gradient(var(--gradient-direction), transparent 0 110px, var(--primary-color-1) 110px 100%);
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .educational {
+    --gradient-direction: to bottom;
+    .content-grid {
+      flex-direction: column;
+    }
+    [class*=__content] {
+      padding-inline: unset;
+    }
+  }
+}

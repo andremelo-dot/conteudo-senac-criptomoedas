@@ -1,0 +1,32 @@
+.ico-top-text {
+  --static-background: #bcbcbc;
+  --static-gap: 32px;
+  --static-ico-max-width: 208px;
+  --static-ico-min-width: -83px;
+  --static-inline: 56px;
+  --static-block: 0 40px;
+
+  .content-grid {
+    background: var(--static-background);
+    margin-top: calc(var(--section-spacing) + var(--static-ico-min-width) * -1);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--static-gap);
+    padding-inline: var(--static-inline);
+    padding-block: var(--static-block);
+
+    img {
+      margin-top: var(--static-ico-min-width);
+      margin-inline: auto;
+      max-width: var(--static-ico-max-width);
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .ico-top-text {
+    --static-inline: 16px;
+    --static-block: 0 20px;
+  }
+}

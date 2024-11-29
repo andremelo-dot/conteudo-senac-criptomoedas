@@ -1,0 +1,19 @@
+.question[data-type='discursive'] {
+  --question-textarea-height: 120px;
+  --question-textarea-padding: 16px;
+
+  .question-alternative {
+    flex-direction: column;
+  }
+
+  .question-input {
+    display: block;
+    width: 100%;
+    min-height: var(--question-textarea-height);
+    padding: var(--question-textarea-padding);
+
+    font-size: px-to-rem(16px);
+    line-height: px-to-rem(24px);
+    resize: none;
+  }
+}

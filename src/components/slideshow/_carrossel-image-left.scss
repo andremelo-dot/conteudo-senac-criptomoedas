@@ -1,0 +1,101 @@
+.content-grid:has(.carrossel-image-left) {
+  --slide-carrossel-gap: 32px;
+  --slide-carrossel-direction: row;
+
+  display: flex;
+  flex-direction: var(--slide-carrossel-direction);
+  gap: var(--slide-carrossel-gap);
+
+  img {
+    display: flex;
+    width: unset;
+    flex-shrink: 0;
+  }
+}
+
+.swiper:not([data-auto-height="true"]) .swiper-wrapper {
+  height: auto !important;
+}
+
+.carrossel-image-left {
+  --slider-slide-display: flex;
+  --slider-slide-direction: row;
+  --slider-slide-height: 371px;
+
+  --slider-content-padding: 0;
+  --slider-content-text-align: left;
+
+  --slider-nav-max-width: 184px;
+  --slider-nav-margin-top: 24px;
+
+  --slider-pagination-max-width: 104px;
+
+  width: 100%;
+
+  .swiper-slide {
+    width: 100%;
+    display: var(--slider-slide-display);
+    flex-direction: var(--slider-slide-direction);
+
+    picture {
+      flex-shrink: 0;
+    }
+  }
+
+  &__slide {
+    background: var(--slider-slide-background);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--slider-content-background);
+    padding: var(--slider-content-padding);
+    text-align: var(--slider-content-text-align);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--slider-nav-max-width);
+    margin-top: unset;
+    position: relative;
+
+    .carrossel-image-left__pagination {
+      width: 100%;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      max-width: var(--slider-pagination-max-width);
+    }
+
+    button {
+      inset: unset;
+      position: relative;
+      margin: 0;
+      z-index: 3;
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .content-grid:has(.carrossel-image-left) {
+    --slide-carrossel-gap: 0;
+    --slide-carrossel-direction: column;
+
+    align-items: center;
+  }
+
+  .carrossel-image-left {
+    --slider-slide-display: block;
+    --slider-slide-height: unset;
+    --slider-content-padding: 0;
+    --slider-content-text-align: center;
+    &__nav {
+      margin-inline: auto;
+    }
+  }
+}

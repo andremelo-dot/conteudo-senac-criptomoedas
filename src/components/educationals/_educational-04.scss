@@ -1,0 +1,42 @@
+.educational-04 {
+  --educational-gap: 24px;
+  --educational-ico-max-width: 264px;
+  --educational-ico-top: -100px;
+  --educational-spacing: calc(var(--section-spacing) + (var(--educational-ico-top) * -1));
+
+  --educational-max-width: 450px;
+  --educational-direction: column;
+
+  --educational-ico-direction: column;
+
+  display: flex;
+  flex-direction: var(--educational-direction);
+  gap: var(--educational-gap);
+  margin-top: var(--educational-spacing);
+
+  .educational__ico {
+    display: flex;
+    flex-direction: var(--educational-ico-direction);
+    align-items: center;
+    justify-content: center;
+    gap: var(--educational-gap);
+    max-width: var(--educational-max-width);
+    margin-inline: auto;
+
+    img {
+      max-width: var(--educational-ico-max-width);
+      margin-top: var(--educational-ico-top);
+    }
+  }
+
+  .educational__title {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 816px) {
+  .educational-04 {
+    --educational-gap: 20px;
+  }
+}

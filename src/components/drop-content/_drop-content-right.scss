@@ -1,0 +1,154 @@
+.drop-content-right {
+  --drop-max-width: 1024px;
+  --drop-direction: row-reverse;
+  --drop-card-width: 280px;
+  --drop-card-height: 295px;
+  --drop-card-image-max-width: 177px;
+  --drop-card-padding: 32px;
+  --drop-card-gap: 32px;
+  --drop-content-color: #282828;
+  --drop-content-padding: 32px;
+  --drop-content-width: 704px;
+  --drop-content-height: 376px;
+  --drop-button-max-width: 40px;
+  --drop-button-height: 100%;
+  --drop-button-ico: url(/assets/images/wireframe/wireframe-card-arrow.svg) center/cover no-repeat;
+  --drop-button-ico-width: 24px;
+  --drop-button-ico-height: 8px;
+  --drop-button-ico-rotate: -90deg;
+
+  max-width: var(--drop-max-width);
+  transition: all 0.6s ease;
+  isolation: isolate;
+  position: relative;
+
+  display: flex;
+  flex-direction: var(--drop-direction);
+
+  &:has(.is-active) {
+    --drop-button-ico-rotate: 90deg;
+
+    .drop-content-right__button {
+      right: calc(var(--drop-card-width) + var(--drop-content-width));
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--drop-card-gap);
+    width: 100%;
+    max-width: var(--drop-card-width);
+    height: var(--drop-card-height);
+    background: var(--drop-background);
+    padding: var(--drop-card-padding);
+
+    img {
+      max-width: var(--drop-card-image-max-width);
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    height: var(--drop-card-height);
+    width: 100%;
+
+    &.is-active {
+      .drop-content-right__text {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: var(--drop-content-background);
+    padding: var(--drop-content-padding);
+    transform: translateX(calc(100%));
+    transition: transform 600ms ease;
+  }
+
+  &__button {
+    position: absolute;
+    right: var(--drop-card-width);
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--drop-button-max-width);
+    min-height: var(--drop-button-height);
+    background: var(--drop-button-background);
+    border: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+
+    transition: right 600ms ease;
+
+    &::before {
+      content: '';
+      background: var(--drop-button-ico);
+      width: var(--drop-button-ico-width);
+      height: var(--drop-button-ico-height);
+      transform: rotate(var(--drop-button-ico-rotate));
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .drop-content-right {
+    --drop-card-width: 320px;
+    --drop-direction: column;
+    --drop-button-max-width: 100%;
+    --drop-button-height: 40px;
+    --drop-button-ico-rotate: rotate(180deg);
+
+    margin-inline: auto;
+
+    &:has(.is-active) {
+      --drop-button-ico-rotate: rotate(0);
+
+      .drop-content-right__button {
+        right: unset;
+        top: calc(var(--drop-card-height) + var(--drop-content-height));
+      }
+    }
+
+    &__content {
+      background: var(--drop-content-background);
+      max-width: var(--drop-card-width);
+      height: 0; // alterar para 0 caso queira animação.
+      width: 100%;
+      transition: height 600ms ease;
+
+      &.is-active {
+        height: var(--drop-content-height); // pegar a altura do height fixa do guia e aplicar a --drop-content-height
+
+        .drop-content-left__text {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &__text {
+      transform: translateY(calc(-100%));
+      transition: transform 600ms ease;
+    }
+
+    &__button {
+      right: unset;
+      top: var(--drop-card-height);
+    }
+  }
+}

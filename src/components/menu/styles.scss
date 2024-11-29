@@ -1,0 +1,32 @@
+$menu-open-font-size: 24px;
+$menu-open-line-height: 32px;
+
+.open-menu {
+  --menu-open-background: #a5a5a5;
+  --menu-open-padding: 16px 24px;
+  --menu-open-max-width: 182px;
+  --menu-open-color: var(--secondary);
+
+  width: 100%;
+  max-width: var(--menu-open-max-width);
+  padding: var(--menu-open-padding);
+  background: var(--menu-open-background);
+  color: var(--menu-open-color);
+  font-size: px-to-rem($menu-open-font-size);
+  line-height: px-to-rem($menu-open-line-height);
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  gap: 8px;
+  border: none;
+  text-align: left;
+  z-index: 9998;
+
+  img {
+    max-width: 50px;
+  }
+}

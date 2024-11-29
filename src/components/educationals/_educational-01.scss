@@ -1,0 +1,55 @@
+.hora-do-desafio {
+  --resource-bg-color: var(--primary-color-3);
+}
+
+.exemplo-que-inspira {
+  --resource-bg-color: var(--primary-color-1);
+}
+
+.educational-01 {
+  --educational-gap: 0;
+  --educational-ico-max-width: 230px;
+  --educational-ico-top: 0;
+  --educational-spacing: calc(var(--section-spacing) + (var(--educational-ico-top)* -1));
+  --educational-max-width: 450px;
+  --educational-direction: row;
+  --educational-ico-direction: row;
+  --bg-direction: to right;
+  --educational-background: linear-gradient(var(--bg-direction), transparent 0 115px, var(--resource-bg-color) 115px 100%);
+
+  display: flex;
+  -ms-flex-direction: var(--educational-direction);
+  flex-direction: var(--educational-direction);
+  gap: var(--educational-gap);
+  margin-top: var(--educational-spacing);
+
+  .educational__ico {
+    display: flex;
+    flex-direction: var(--educational-ico-direction);
+    align-items: center;
+    justify-content: center;
+    gap: var(--educational-gap);
+    max-width: var(--educational-max-width);
+    margin-inline: auto;
+    flex: none;
+
+    img {
+      max-width: var(--educational-ico-max-width);
+      margin-top: var(--educational-ico-top);
+    }
+  }
+
+  .educational__title {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 816px) {
+  .educational-01 {
+    --educational-gap: 20px;
+    --educational-direction: column;
+    --educational-ico-direction: column;
+    --bg-direction: to bottom;
+  }
+}

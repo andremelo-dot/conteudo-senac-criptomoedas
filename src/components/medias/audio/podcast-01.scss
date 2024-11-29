@@ -1,0 +1,233 @@
+// ESTILO DO PODCAST 1
+.podcast-01 {
+  // PLYR AUDIO CONFIGS
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-color: #ffffff;
+  --plyr-audio-progress-buffered-background: #ffffff;
+  --plyr-timer-color: var(--wireframe-black);
+
+  // PLYR PODCAST01 GUIDE CONFIGS
+  --plyr-wrapper-maxwidth: 672px;
+  --plyr-background: #dddddd;
+  --plyr-gap: 32px;
+  --plyr-image-maxwidth: 144px;
+  --plyr-content-gap: 16px;
+  --plyr-subtitles-button-background: #ffffff;
+  --plyr-subtitles-background: #bcbcbc;
+  --plyr-maxwidth: 464px;
+  --plyr-audio-maxwidth: 349px;
+  --plyr-subtitles-maxwidth: 528px;
+  --plyr-subtitles-maxheight: 168px;
+  --plyr-subtitles-padding: 16px 24px;
+  --plyr-subtitles-arrow-background: url(/assets/images/plyr/plyr-arrow-subtitle.svg);
+  --plyr-subtitles-arrow-width: 24px;
+  --plyr-subtitles-arrow-height: 8px;
+  --plyr-subtitles-block: 8px;
+  --plyr-subtitles-inline: 8px;
+  --plyr-subtitles-gap: 8px;
+  --plyr-subtitles-scroll-background: #ffffff;
+  --plyr-subtitles-scroll-background-thumb: #d3d3d3;
+
+  .podcast-wrapper {
+    max-width: var(--plyr-wrapper-maxwidth);
+    background: var(--plyr-background);
+    gap: var(--plyr-gap);
+
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+
+    .podcast-image {
+      width: 100%;
+      max-width: var(--plyr-image-maxwidth);
+    }
+
+    .podcast-content {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: var(--plyr-background);
+      gap: var(--plyr-content-gap);
+      padding-right: 16px;
+
+      .podcast {
+        display: flex;
+        width: 100%;
+        max-width: var(--plyr-maxwidth);
+        gap: 8px;
+
+        .plyr {
+          max-width: var(--plyr-audio-maxwidth);
+          width: 100%;
+
+          &__controls {
+            [data-plyr='play'] {
+              background: var(--plyr-control-audio-play-background);
+              width: var(--plyr-control-audio-play-width);
+              height: var(--plyr-control-audio-play-height);
+
+              &[aria-pressed='true'] {
+                --plyr-control-audio-play-background: url(/assets/images/plyr/plyr-audio-pause.svg) center / cover no-repeat;
+              }
+
+              &:hover {
+                background: var(--plyr-control-audio-play-background);
+                filter: brightness(105%);
+              }
+            }
+
+            [data-plyr='mute'] {
+              background: var(--plyr-control-audio-volume-background);
+              width: var(--plyr-control-audio-volume-width);
+              height: var(--plyr-control-audio-volume-height);
+
+              &[aria-pressed='true'] {
+                --plyr-control-audio-volume-background: url(/assets/images/plyr/plyr-audio-mute.svg) center / cover no-repeat;
+              }
+
+              &:hover {
+                background: var(--plyr-control-audio-volume-background);
+                filter: brightness(105%);
+              }
+            }
+
+            .plyr__time {
+              color: var(--plyr-timer-color);
+            }
+          }
+        }
+      }
+
+      .handle-transcription {
+        background: var(--plyr-subtitles-button-background);
+
+        &::before {
+          background: var(--plyr-subtitles-background);
+        }
+      }
+    }
+  }
+
+  .podcast-subtitles {
+    display: none;
+    width: 100%;
+    max-width: var(--plyr-wrapper-maxwidth);
+    margin-inline: auto;
+
+    &.is-active {
+      display: block;
+    }
+
+    &__wrapper {
+      max-width: var(--plyr-subtitles-maxwidth);
+      background: var(--plyr-subtitles-background);
+      padding: var(--plyr-subtitles-padding);
+      margin-left: auto;
+
+      .subtitles {
+        overflow-y: scroll;
+        max-height: var(--plyr-subtitles-maxheight);
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: var(--plyr-subtitles-scroll-background);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--plyr-subtitles-scroll-background-thumb);
+        }
+      }
+    }
+  }
+
+  .handle-transcription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--plyr-subtitles-inline);
+    min-height: var(--plyr-control-audio-play-height);
+    gap: var(--plyr-subtitles-gap);
+
+    &.is-active {
+      &::before {
+        transform: scaleY(-1);
+      }
+    }
+
+    &::before {
+      content: '';
+      mask-image: var(--plyr-subtitles-arrow-background);
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      width: var(--plyr-subtitles-arrow-width);
+      height: var(--plyr-subtitles-arrow-height);
+    }
+  }
+}
+
+@media (max-width: 816px) {
+  .podcast-01 {
+    --plyr-control-audio-play-width: 32px;
+    --plyr-control-audio-play-height: 32px;
+    --plyr-control-audio-volume-width: 32px;
+    --plyr-control-audio-volume-height: 32px;
+    --plyr-subtitles-inline: 8px;
+    --plyr-subtitles-block: 8px;
+    --plyr-subtitles-gap: 4px;
+    --plyr-subtitles-arrow-width: 20px;
+    --plyr-subtitles-arrow-height: 8px;
+    --plyr-wrapper-maxwidth: 652px;
+    --plyr-maxwidth: 652px;
+    --plyr-subtitles-maxwidth: 652px;
+    --plyr-audio-maxwidth: 652px;
+    --plyr-gap: 0;
+    --plyr-content-gap: 16px;
+
+    .podcast-wrapper {
+      flex-direction: column;
+      margin-inline: auto;
+
+      .podcast-image {
+        background: #d3d3d3;
+        max-width: 1024px;
+        width: 100%;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 150px;
+        }
+      }
+
+      .podcast-content {
+        padding: 16px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .podcast {
+          .plyr {
+            &__controls {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .podcast-subtitles {
+      &__wrapper {
+        margin-inline: auto;
+        padding: 16px;
+      }
+    }
+  }
+}

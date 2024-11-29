@@ -1,0 +1,40 @@
+.educational {
+  --educational-title-color: #282828;
+  --educational-color: #fff;
+  --educational-padding: 24px;
+  background: var(--educational-background);
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--educational-padding);
+    color: var(--educational-color);
+    &__title {
+      margin-top: unset;
+    }
+  }
+
+  &__title {
+    color: var(--educational-title-color);
+  }
+
+  &__text {
+    * {
+      color: var(--educational-color);
+    }
+  }
+}
+
+.educational-container {
+  --educational-background: #bcbcbc;
+
+  background: var(--educational-background);
+}
+
+@media (max-width: 816px) {
+  .educational {
+    --educational-padding: 0 24px 56px 24px;
+    --educational-content-gap: 16px;
+  }
+}

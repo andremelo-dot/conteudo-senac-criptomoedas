@@ -1,0 +1,97 @@
+.timeline-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 4px;
+    background: var(--primary-color-3);
+    top: 50%;
+    right: 10%;
+    transform: translate(0px, -50%);
+    z-index: -1;
+  }
+}
+
+.time-node {
+
+  display: grid;
+  grid-template-rows: 180px 20px 180px;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+
+  img {
+    align-self: center;
+  }
+
+  button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    background: var(--primary-color-3) url(/assets/images/wireframe/ico-plus-white.svg) center no-repeat;
+    background-size: 50%;
+    border-radius: 50%;
+    transition: .3s;
+  }
+  
+  .time-text {
+    transform: scaleX(0);
+    opacity: 0;
+    transition: .3s;
+    background: var(--primary-color-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 8px;
+
+    p {
+      font-size: calc(var(--paragraph-fs) * 0.7);
+      line-height: calc(var(--paragraph-lh) * 0.7);
+      margin: 0;
+    }
+  }
+
+  &.is-active {
+    button {
+      transform: rotate(45deg);
+      background-color: var(--secondary-color-2);
+    }
+
+    .time-text {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .timeline-custom {
+    flex-direction: column;
+    &::before {
+      width: 4px;
+      height: calc(100% - 90px);
+      top: unset;
+      bottom: 72px;
+      right: unset;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  }
+  .time-text {
+    height: 150px;
+  }
+  .time-node {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 20px 1fr;
+    align-items: center;
+  }
+}

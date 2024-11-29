@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+   <!--This is a SCORM 1.2 Content Package document-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  identifier="MANIFEST-UCSVXZIWFMSAUXGCYALWPPRKKPHGHHGP"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <adlcp:location />
+  </metadata>
+  <organizations default="ORG-CVYDXIJRACJTK2PWXILZ9GQAXMVGDEF7">
+    <organization identifier="ORG-CVYDXIJRACJTK2PWXILZ9GQAXMVGDEF7" structure="hierarchical">
+    <title>Cultura Analítica</title>
+    <item identifier="ITEM-F3E8PEZ7ET5FCJMKARKK8H146NFMA31D" identifierref="RES-DGZANIAIMQTHHLBQDIGRTLL4TOIXWQ2L" isvisible="true">
+      <title>Boas-vindas!</title>
+    </item>
+    <item identifier="ITEM-MZXKUBEXDCBIKBJ35RJ4PZOF7FV9BWCF" identifierref="RES-OMA1UGWZPUC3HICZQ2DOCUBEINZMGIPG" isvisible="true">
+      <title>Módulo 1: Fundamentos da visualização de dados e do design de gráficos</title>
+            <adlcp:prerequisites type="aicc_script">ITEM-F3E8PEZ7ET5FCJMKARKK8H146NFMA31D</adlcp:prerequisites>
+    </item>
+    <item identifier="ITEM-Q8CPFNOQKVGKE2ZL0OSBQHHGZPWBGL0Z" identifierref="RES-VFY9WTU5ZT3B2YBHD5SQLYVBOTFZ5QCT" isvisible="true">
+      <title>Módulo 2: Storytelling com dados</title>
+            <adlcp:prerequisites type="aicc_script">ITEM-MZXKUBEXDCBIKBJ35RJ4PZOF7FV9BWCF</adlcp:prerequisites>
+    </item>
+    <item identifier="ITEM-QEPNO39M0JYX2I7CF3FA8DQW1FV4HRET" identifierref="RES-LLHBLHBA4KM1PIIAKJDDAF8HCHBSEK2N" isvisible="true">
+      <title>Módulo 3: Elaboração de apresentações de impacto e o uso de ferramentas de IA</title>
+            <adlcp:prerequisites type="aicc_script">ITEM-Q8CPFNOQKVGKE2ZL0OSBQHHGZPWBGL0Z</adlcp:prerequisites>
+    </item>
+    <item identifier="ITEM-8SGK4XOCJRAJVBYDLZMNHB1BOZINHNSW" identifierref="RES-PUIHC4G09R9LLRIJPD9GCOPDQVODBTW7" isvisible="true">
+      <title>Encerramento do curso</title>
+            <adlcp:prerequisites type="aicc_script">ITEM-QEPNO39M0JYX2I7CF3FA8DQW1FV4HRET</adlcp:prerequisites>
+    </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="fonts" type="webcontent" adlcp:scormtype="asset">
+      <file href="assets/fonts/AlegreyaSans-Bold.woff" />
+      <file href="assets/fonts/AlegreyaSans-Italic.ttf" />
+      <file href="assets/fonts/AlegreyaSans-Italic.woff" />
+      <file href="assets/fonts/AlegreyaSans-Medium.woff" />
+      <file href="assets/fonts/AlegreyaSans-Regular.ttf" />
+      <file href="assets/fonts/AlegreyaSans-Regular.woff" />
+      <file href="assets/fonts/Campuni-Black.woff" />
+      <file href="assets/fonts/Campuni-Bold.woff" />
+      <file href="assets/fonts/Campuni-Regular.woff" />
+      <file href="assets/fonts/Lato-bold.woff" />
+      <file href="assets/fonts/Lato-bold.woff2" />
+      <file href="assets/fonts/Lato-normal.woff" />
+      <file href="assets/fonts/Lato-normal.woff2" />
+      <file href="assets/fonts/ocr-a-extended-maisfontes.991b.zip" />
+      <file href="assets/fonts/ocr-a-extended.ttf" />
+      <file href="assets/fonts/OCRAExtended.woff" />
+    </resource>
+    <resource identifier="scripts" type="webcontent" adlcp:scormtype="asset">
+      <file href="assets/js/html2canvas.esm.js" />
+      <file href="assets/js/index.es.js" />
+      <file href="assets/js/jquery.min.js" />
+      <file href="assets/js/main.js" />
+      <file href="assets/js/purify.es.js" />
+    </resource>
+    <resource identifier="styles" type="webcontent" adlcp:scormtype="asset">
+      <file href="assets/css/main.css" />
+    </resource>
+
+    <resource identifier="RES-DGZANIAIMQTHHLBQDIGRTLL4TOIXWQ2L" href="sco-01.html" type="webcontent" adlcp:scormtype="sco">
+      <file href="sco-01.html" />
+    </resource>
+    <resource identifier="RES-OMA1UGWZPUC3HICZQ2DOCUBEINZMGIPG" href="sco-02.html" type="webcontent" adlcp:scormtype="sco">
+      <file href="sco-02.html" />
+    </resource>
+    <resource identifier="RES-VFY9WTU5ZT3B2YBHD5SQLYVBOTFZ5QCT" href="sco-03.html" type="webcontent" adlcp:scormtype="sco">
+      <file href="sco-03.html" />
+    </resource>
+    <resource identifier="RES-LLHBLHBA4KM1PIIAKJDDAF8HCHBSEK2N" href="sco-04.html" type="webcontent" adlcp:scormtype="sco">
+      <file href="sco-04.html" />
+    </resource>
+    <resource identifier="RES-PUIHC4G09R9LLRIJPD9GCOPDQVODBTW7" href="sco-05.html" type="webcontent" adlcp:scormtype="sco">
+      <file href="sco-05.html" />
+    </resource>
+  </resources>
+</manifest>

@@ -1,0 +1,54 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      0
+    ],
+    "eol-last": "error",
+    "prefer-const": "off",
+    "eqeqeq": "warn",
+    "import/prefer-default-export": 0,
+    "func-names": "off",
+    "import/no-mutable-exports": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "mjs"
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      {
+        "variables": false
+      }
+    ],
+    "radix": [
+      "error",
+      "as-needed"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+.educational-05 {
+  --educational-gap: 24px;
+  --educational-ico-max-width: 264px;
+  --educational-ico-top: -100px;
+  --educational-spacing: calc(var(--section-spacing) + (var(--educational-ico-top) * -1));
+
+  --educational-max-width: 669px;
+  --educational-direction: column;
+
+  --educational-ico-direction: row;
+
+  display: flex;
+  flex-direction: var(--educational-direction);
+  gap: var(--educational-gap);
+  margin-top: var(--educational-spacing);
+
+  .educational__ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--educational-gap);
+    flex-direction: var(--educational-ico-direction);
+    max-width: var(--educational-max-width);
+
+    img {
+      max-width: var(--educational-ico-max-width);
+      margin-top: var(--educational-ico-top);
+    }
+  }
+
+  .educational__title {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 816px) {
+  .educational-05 {
+    --educational-gap: 20px;
+    --educational-ico-direction: column;
+    --educational-max-width: 450px;
+
+    .educational__ico {
+      margin-inline: auto;
+
+      text-align: center;
+    }
+  }
+}

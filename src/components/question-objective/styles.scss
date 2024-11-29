@@ -1,0 +1,108 @@
+.question[data-type='objective'] {
+  --question-input-width: 32px;
+  --question-input-background: #ffffff;
+  --question-input-height: 32px;
+  --question-input-radius: 50%;
+  --question-input-border: 3px solid var(--primary-color-3);
+  --question-input-checked-background: var(--primary-color-3);
+  --question-input-checked-width: 20px;
+  --question-input-checked-height: 20px;
+  --question-input-checked-radius: 50%;
+
+  --question-label-color: #282828;
+  --question-label-checked-color: var(--primary-color-3);
+
+  // COR DA ALTERNATIVA PARA INCORRETA AO RESPONDER PARA VERMELHO E A RESPOSTA CORRETA PARA VERDE
+  &[data-status='0'][data-progress='1'] {
+    .question-input[data-score='1'] {
+      & + .question-label {
+        color: green;
+      }
+    }
+
+    .question-input:checked {
+      border-color: red;
+
+      &::before {
+        background: red;
+      }
+
+      & + .question-label {
+        color: red;
+      }
+    }
+  }
+
+  // COR DA ALTERNATIVA CORRETA PARA VERDE
+  &[data-status='1'][data-progress='1'] {
+    .question-input:checked {
+      border-color: green;
+
+      &::before {
+        background: green;
+      }
+
+      & + .question-label {
+        color: green;
+      }
+    }
+  }
+
+  .question-input {
+    position: relative;
+    appearance: none;
+    background: var(--question-input-background);
+    width: var(--question-input-width);
+    height: var(--question-input-height);
+    border: var(--question-input-border);
+    border-radius: var(--question-input-radius);
+    flex-shrink: 0;
+    cursor: pointer;
+
+    &:checked {
+      & + .question-label {
+        color: var(--question-label-checked-color);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: var(--question-input-checked-width);
+        height: var(--question-input-checked-height);
+        background: var(--question-input-checked-background);
+        border-radius: var(--question-input-checked-radius);
+      }
+    }
+  }
+
+  .question-label {
+    color: var(--question-label-color);
+  }
+}
+
+@media (max-width: 816px) {
+  .question {
+    --question-gap: 16px;
+
+    --question-wrapper-padding: 16px;
+    --question-wrapper-gap: 20px;
+
+    --question-input-width: 20px;
+    --question-input-height: 20px;
+    --question-input-border: 1px solid #bcbcbc;
+    --question-input-checked-width: 12px;
+    --question-input-checked-height: 12px;
+
+    --question-alternative-gap: 8px;
+    --question-alternative-margin: 28px;
+
+    --question-actions-gap: 12px;
+
+    &-alternative {
+      // flex-direction: column;
+    }
+  }
+}

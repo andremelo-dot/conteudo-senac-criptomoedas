@@ -1,0 +1,260 @@
+/* ********************************************
+  Grid System
+******************************************** */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.grid .col-1 {
+  grid-column: span 1 / span 1;
+}
+
+.grid .col-2 {
+  grid-column: span 2 / span 2;
+}
+
+.grid .col-3 {
+  grid-column: span 3 / span 3;
+}
+
+.grid .col-4 {
+  grid-column: span 4 / span 4;
+}
+
+.grid .col-5 {
+  grid-column: span 5 / span 5;
+}
+
+.grid .col-6 {
+  grid-column: span 6 / span 6;
+}
+
+.grid .col-7 {
+  grid-column: span 7 / span 7;
+}
+
+.grid .col-8 {
+  grid-column: span 8 / span 8;
+}
+
+.grid .col-9 {
+  grid-column: span 9 / span 9;
+}
+
+.grid .col-10 {
+  grid-column: span 10 / span 10;
+}
+
+.grid .col-11 {
+  grid-column: span 11 / span 11;
+}
+
+.grid .col-12 {
+  grid-column: span 12 / span 12;
+}
+
+@media screen and (min-width: 1366.02px) {
+  .grid .col-xl-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .grid .col-xl-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .grid .col-xl-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .grid .col-xl-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .grid .col-xl-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .grid .col-xl-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .grid .col-xl-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .grid .col-xl-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .grid .col-xl-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .grid .col-xl-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .grid .col-xl-11 {
+    grid-column: span 11 / span 11;
+  }
+
+  .grid .col-xl-12 {
+    grid-column: span 12 / span 12;
+  }
+}
+
+@media screen and (min-width: 1920.02px) {
+  .grid .col-xxl-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .grid .col-xxl-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .grid .col-xxl-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .grid .col-xxl-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .grid .col-xxl-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .grid .col-xxl-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .grid .col-xxl-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .grid .col-xxl-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .grid .col-xxl-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .grid .col-xxl-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .grid .col-xxl-11 {
+    grid-column: span 11 / span 11;
+  }
+
+  .grid .col-xxl-12 {
+    grid-column: span 12 / span 12;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .grid {
+    gap: 16px;
+  }
+
+  .grid .col-md-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .grid .col-md-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .grid .col-md-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .grid .col-md-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .grid .col-md-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .grid .col-md-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .grid .col-md-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .grid .col-md-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .grid .col-md-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .grid .col-md-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .grid .col-md-11 {
+    grid-column: span 11 / span 11;
+  }
+
+  .grid .col-md-12 {
+    grid-column: span 12 / span 12;
+  }
+}
+
+@media screen and (max-width: 411.98px) {
+  .grid .col-sm-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .grid .col-sm-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .grid .col-sm-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .grid .col-sm-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .grid .col-sm-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .grid .col-sm-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .grid .col-sm-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .grid .col-sm-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .grid .col-sm-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .grid .col-sm-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .grid .col-sm-11 {
+    grid-column: span 11 / span 11;
+  }
+
+  .grid .col-sm-12 {
+    grid-column: span 12 / span 12;
+  }
+}

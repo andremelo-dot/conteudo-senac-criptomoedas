@@ -1,0 +1,67 @@
+// PLYR VIDEO
+.video {
+  // CONFIG VIDEO
+  // PLYR VIDEO  CONFIGS
+  --plyr-video-controls-background: var(--primary-color-3);
+  --plyr-video-control-color: #ffffff;
+  --plyr-video-progress-buffered-background: #ffffff;
+
+  --plyr-font-size-base: var(--paragraph-size);
+  --plyr-font-size-menu: var(--paragraph-size);
+  --plyr-font-size-time: var(--paragraph-size);
+
+  --plyr-video-control-background-hover: var(--primary-color-1);
+  --plyr-menu-color: #fff;
+  --plyr-menu-background: var(--primary-color-3);
+  --plyr-range-track-height: 8px;
+  --plyr-range-fill-background: var(--primary-color-1);
+  --plyr-range-thumb-background: transparent;
+  --plyr-range-thumb-shadow: 0px;
+  // --plyr-control-spacing: 16px;
+  --plyr-timer-color: var(--wireframe-text-color);
+
+  &__transcription {
+    margin-top: 16px;
+    padding: 16px;
+    border: 2px solid var(--primary-color-3);
+
+    .video__content {
+      height: 200px;
+    }
+  }
+}
+
+.plyr {
+  &__video-wrapper {
+    --aspect-ratio: 16/9;
+    --controls-height: 80px;
+    height: min(100dvh, 100%);
+    width: min(calc((100dvh * var(--aspect-ratio) - var(--controls-height))), 100%);
+  }
+}
+
+@media (max-width: 816px) {
+  .plyr {
+    --plyr-control-video-play-width: 32px;
+    --plyr-control-video-play-height: 32px;
+    --plyr-control-video-volume-width: 32px;
+    --plyr-control-video-volume-height: 32px;
+    --plyr-control-video-fullscreen-width: 32px;
+    --plyr-control-video-fullscreen-height: 32px;
+
+    --plyr-overlaid-play-width: 35px;
+    --plyr-overlaid-play-height: 46px;
+
+    &__volume input[type=range] {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .plyr--video {
+    .plyr__controls {
+      padding: 16px;
+    }
+  }
+}

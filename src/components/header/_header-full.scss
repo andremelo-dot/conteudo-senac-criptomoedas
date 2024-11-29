@@ -1,0 +1,66 @@
+.header-full {
+  --header-padding-bottom: 20px;
+  --header-background: url(/assets/images/wireframe/wireframe-holder-03.png) center/cover no-repeat;
+  --header-minheight: 540px;
+  --header-maxwidth: 1920px;
+  --header-maxwidth-wrapper: 1024px;
+  --header-gap-wrapper: 24px;
+  --header-gap-content: 20px;
+
+  width: 100%;
+  background: var(--header-background);
+  min-height: var(--header-minheight);
+  max-width: var(--header-maxwidth);
+  padding-bottom: var(--header-padding-bottom);
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+
+  :is(h1, h2) {
+    margin-top: 0;
+  }
+
+  button {
+    margin-inline: auto;
+  }
+
+  &__wrapper {
+    max-width: var(--header-maxwidth-wrapper);
+    width: 100%;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--header-gap-wrapper);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--header-gap-content);
+  }
+}
+
+@media (max-width: 816px) {
+  .header-full {
+    --header-gap-wrapper: 20px;
+    --header-gap-content: 16px;
+    --header-padding-bottom: 40px;
+
+    padding-inline: 16px;
+    align-items: flex-end;
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__content {
+      button {
+        margin-top: calc(var(--header-gap-content) + 12px);
+      }
+    }
+  }
+}
