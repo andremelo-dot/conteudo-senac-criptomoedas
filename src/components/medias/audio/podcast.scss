@@ -1,11 +1,14 @@
 // ESTILO DO PODCAST 2
 .podcast {
   // PLYR AUDIO CONFIGS
-  --plyr-audio-controls-background: var(--primary-color-2);
-  --plyr-audio-control-color: var(--primary-color-3);
+  --plyr-audio-controls-background: var(--primary-color-3);
+  --plyr-audio-control-color: var(--primary-color-1);
   --plyr-audio-progress-buffered-background: #ffffff;
-  --plyr-timer-color: var(--secondary-color-3);
-  --plyr-range-fill-background: var(--primary-color-3);
+  --plyr-timer-color: var(--primary-color-1);
+  --plyr-range-fill-background: var(--primary-color-4);
+  --plyr-audio-control-color-hover: var(--primary-color-1);
+  --plyr-audio-control-background-hover: var(--primary-color-2);
+  --plyr-control-toggle-checked-background: var(--plyr-audio-control-color);
 
   // PLYR PODCAST02 GUIDE CONFIGS
   --plyr-maxwidth: 464px;
@@ -22,7 +25,7 @@
   --plyr-subtitles-background: #bcbcbc;
   --plyr-subtitles-padding: 32px;
   --plyr-subtitles-maxheight: 76px;
-  --plyr-subtitles-button-background: var(--primary-color-3);
+  --plyr-subtitles-button-background: var(--primary-color-1);
   --plyr-subtitles-background: #fff;
   --plyr-subtitles-arrow-background: url(/assets/images/plyr/plyr-arrow-subtitle.svg);
   --plyr-subtitles-arrow-width: 24px;
@@ -30,22 +33,22 @@
   --plyr-subtitles-block: 12px;
   --plyr-subtitles-inline: 8px;
   --plyr-subtitles-gap: 8px;
-  --plyr-subtitles-scroll-background: var(--terciary-color-1);
-  --plyr-subtitles-scroll-background-thumb: var(--primary-color-3);
+  --plyr-subtitles-scroll-background: var(--primary-color-3);
+  --plyr-subtitles-scroll-background-thumb: var(--primary-color-1);
 
   .podcast-wrapper {
     max-width: var(--plyr-wrapper-maxwidth);
-
+    border-radius: 10px 10px 10px 0;
     display: flex;
     align-items: center;
     margin-inline: auto;
     align-items: center;
-    background: var(--primary-color-3);
+    background: var(--primary-color-1);
     position: relative;
     z-index: 1;
 
     &::after {
-      content: '';
+      // content: '';
       display: block;
       position: absolute;
       right: 0;
@@ -88,13 +91,15 @@
           width: 100%;
 
           &__controls {
+            border-radius: 100px;
+
             [data-plyr='play'] {
               background: var(--plyr-control-audio-play-background);
               width: var(--plyr-control-audio-play-width);
               height: var(--plyr-control-audio-play-height);
 
               &[aria-pressed='true'] {
-                --plyr-control-audio-play-background: url(/assets/images/plyr/plyr-audio-pause.svg) center / cover no-repeat;
+                // --plyr-control-audio-play-background: url(/assets/images/plyr/plyr-audio-pause.svg) center / cover no-repeat;
               }
 
               &:hover {
@@ -109,11 +114,11 @@
               height: var(--plyr-control-audio-volume-height);
 
               &[aria-pressed='true'] {
-                --plyr-control-audio-volume-background: url(/assets/images/plyr/plyr-audio-mute.svg) center / cover no-repeat;
+                // --plyr-control-audio-volume-background: url(/assets/images/plyr/plyr-audio-mute.svg) center / cover no-repeat;
               }
 
               &:hover {
-                background: var(--plyr-control-audio-volume-background);
+                // background: var(--plyr-control-audio-volume-background);
                 filter: brightness(105%);
               }
             }
@@ -133,7 +138,8 @@
     background: var(--plyr-subtitles-background);
     padding: var(--plyr-subtitles-padding);
     margin: 0;
-    border: 4px solid var(--primary-color-3);
+    border: 4px solid var(--primary-color-1);
+    border-radius: 10px;
     transform: translateY(-100%);
     opacity: 0;
     height: 74px;
@@ -158,10 +164,12 @@
 
       &::-webkit-scrollbar-track {
         background: var(--plyr-subtitles-scroll-background);
+        border-radius: 8px;
       }
 
       &::-webkit-scrollbar-thumb {
         background: var(--plyr-subtitles-scroll-background-thumb);
+        border-radius: 8px;
       }
 
     }
@@ -181,22 +189,23 @@
     // min-height: var(--plyr-control-audio-play-height);
     height: 50px;
     width: 200px;
+    border-radius: 0 0 10px 10px;
     background: var(--plyr-subtitles-button-background);
     box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
     transition: .5s;
     z-index: 1;
 
     &.is-active {
-      background: #fff;
-      border: 4px solid var(--primary-color-3);
-      color: var(--primary-color-3);
+      background: var(--primary-color-2);
+      // border: 4px solid var(--primary-color-3);
+      color: var(--primary-color-1);
     }
 
     @media (hover: hover) {
       &:hover {
-        background: #fff;
-        border: 4px solid var(--primary-color-3);
-        color: var(--primary-color-3);
+        background: var(--primary-color-2);
+        // border: 4px solid var(--primary-color-2);
+        color: var(--primary-color-1);
       }
     }
 
@@ -213,7 +222,7 @@
   }
 }
 
-@media (max-width: 816px) {
+@media (max-width: 740px) {
   // ESTILO DO PODCAST 2
   .podcast {
     --plyr-control-audio-play-width: 32px;
@@ -239,6 +248,7 @@
     .podcast-wrapper {
       flex-direction: column;
       margin-inline: auto;
+      border-radius: 10px;
 
       .podcast-image {
        display: none;

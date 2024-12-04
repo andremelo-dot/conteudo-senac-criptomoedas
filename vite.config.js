@@ -6,14 +6,16 @@ import { defineConfig } from 'vite';
 
 const config = {
   base: './',
-  htmlFilenamePattern: 'sco',
+  htmlFilenamePattern: 'guide',
   outDir: './dist/course/',
   initPage: '',
   root: './dist/course/',
-  xmlEnconding: 'WINDOWS-1252',
+  xmlEnconding: 'UTF-8',
   havePrerequisites: true,
-  organizationTitle: 'Cultura Analítica'
+  organizationTitle: 'SENAC NA'
 }
+
+// EVITE rodar o build enquanto estiver com o server rodando. O genscorm vai entrar num loop na hora de criar o zip.
 
 const func = async function () {
 	return new Promise(async (res) =>{

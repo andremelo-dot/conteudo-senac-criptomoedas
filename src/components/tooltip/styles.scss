@@ -3,6 +3,10 @@
   cursor: pointer;
 }
 
+.tippy-box {
+  border-radius: 10px;
+}
+
 // PARA FUNCIONAR EM FUNDOS CLAROS
 [data-tippy-theme='light'] {
   --tip-background: unset;

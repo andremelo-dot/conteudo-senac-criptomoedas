@@ -1,14 +1,4 @@
 .question[data-type='multiple'] {
-  --question-input-width: 32px;
-  --question-input-background: #ffffff;
-  --question-input-height: 32px;
-  --question-input-radius: 0;
-  --question-input-border: 3px solid var(--primary-color-3);
-  --question-input-checked-background: var(--primary-color-3);
-  --question-input-checked-width: 18px;
-  --question-input-checked-height: 18px;
-  --question-input-checked-radius: 0;
-
   .question-input {
     position: relative;
     appearance: none;

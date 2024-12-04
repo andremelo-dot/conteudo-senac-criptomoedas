@@ -1,5 +1,9 @@
 // NÃO MODIFICAR AQUI
 :where(.question) {
+  --feedback-correct: var(--primary-color-2);
+  --feedback-first-try: var(--primary-color-2);
+  --feedback-incorrect: #FF7051;
+
   &[data-progress='0'][data-status='0'] {
     .feedback-complete {
       display: none;
@@ -36,6 +40,9 @@
       flex-direction: column;
     }
   }
+  .feedback-title {
+    font-weight: bold;
+  }
 }
 // **************************
 
@@ -45,7 +52,7 @@
   --feedback-close-width: 22px;
   --feedback-close-height: 22px;
 
-  background: #000;
+  background: currentColor;
   mask-image: var(--feedback-close);
   mask-size: cover;
   mask-position: center;
@@ -54,7 +61,7 @@
   height: var(--feedback-close-height);
   border: 0;
   display: block;
-  margin-left: auto;
+  margin: 40px auto 0;
 }
 
 // PRIMEIRA TENTATIVA
@@ -67,7 +74,9 @@
     position: relative;
     background: var(--feedback-background);
     padding: var(--feedback-padding);
+    color: var(--primary-color-1);
     max-width: var(--feedback-max-width);
+    border-radius: 10px;
 
     .question-btn[data-type='close'] {
       // position: absolute;
@@ -89,15 +98,14 @@
     background: var(--feedback-background);
     padding: var(--feedback-padding);
     max-width: var(--feedback-max-width);
+    color: #fff;
 
     .feedback-title {
       color: var(--feedback-title-color);
     }
 
     .question-btn[data-type='close'] {
-      // position: absolute;
-      // top: 10px;
-      // right: 10px;
+      color: #fff;
     }
   }
 }
@@ -148,10 +156,11 @@
 
   :is(.feedback-complete, .feedback-incomplete) {
     --feedback-max-width: 640px;
+    border-radius: 20px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 740px) {
   :where(.question) {
     .feedback-complete__text {
       display: flex;

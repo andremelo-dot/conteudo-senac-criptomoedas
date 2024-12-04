@@ -1,4 +1,4 @@
-@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+@media screen and (min-width: 741px) and (prefers-reduced-motion: no-preference) {
     [data-animate] {
         opacity: 0;
         visibility: hidden;

@@ -37,10 +37,12 @@ $header-button-line-height: 40px;
 
   &:hover {
     --button-background: var(--primary-color-2);
-    --button-color: var(--white);
+    --button-color: var(--button-hover-color);
   }
 
   &.primary-arrow {
+    color: var(--primary-color-1);
+    box-shadow: 0px 2px 6px rgba(0,0,0,.3);
     &[data-type='next'] {
       flex-direction: row;
     }
@@ -54,15 +56,15 @@ $header-button-line-height: 40px;
     }
 
     &:hover {
-      color: var(--secondary-color-3);
+      color: var(--primary-color-1);
       &::after {
-        background: var(--secondary-color-3);
+        background: var(--primary-color-1);
       }
     }
 
     &::after {
       content: '';
-      background: var(--secondary-color-1);
+      background: var(--primary-color-1);
       mask-image: var(--button-arrow);
       mask-size: cover;
       mask-repeat: no-repeat;
@@ -74,9 +76,9 @@ $header-button-line-height: 40px;
 
   &.primary-icon {
     &:hover {
-      color: var(--secondary-color-3);
+      color: var(--button-hover-color);
       &::after {
-        background: var(--secondary-color-3);
+        background: var(--primary-color-2);
       }
     }
 
@@ -96,6 +98,7 @@ $header-button-line-height: 40px;
 .secondary {
   --button-background: var(--primary-color-1);
   --button-color: var(--white);
+  --button-hover-color: var(--primary-color-1);
   --button-border: unset;
   --button-padding: 8px 20px;
   --button-text-transform: unset;
@@ -117,7 +120,7 @@ $header-button-line-height: 40px;
 
   &:hover {
     --button-background: var(--secondary-color-2);
-    --button-color: var(--white);
+    --button-color: var(--button-hover-color);
   }
 }
 
@@ -141,12 +144,16 @@ button {
 
   &[data-type='try'] {
     @extend .secondary;
+    border-radius: 10px;
+    --button-background: #fff;
+    --button-color: var(--primary-color-1);
   }
 
   &[data-type='save'] {
     @extend .primary;
-    // --button-background: var(--secondar-color-2);
-    // --button-color: var(--white);
+    border-radius: 10px;
+    --button-background: #D8D8D8;
+    --button-color: var(--primary-color-1);
   }
 
   &[data-type='pdf'] {
@@ -193,7 +200,7 @@ button {
   }
 }
 
-@media (max-width: 816px) {
+@media (max-width: 740px) {
   $primary-font-size: 20px;
   $primary-line-height: 28px;
 

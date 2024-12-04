@@ -11,8 +11,8 @@
   --card-button-min-height: 48px;
   --card-button-icon: url(/assets/images/wireframe/ico-plus.svg);
   --card-button-icon-opened: url(/assets/images/wireframe/ico-minus.svg);
-  --card-button-background: #fff;
-  --card-button-background-opened: var(--primary-color-3);
+  --card-button-background: var(--primary-color-1);
+  --card-button-background-opened: var(--primary-color-2);
   --card-button-icon-width: 24px;
   --card-button-icon-height: 24px;
 
@@ -35,6 +35,8 @@
     & > div {
       position: relative;
       box-shadow: 0px 4px 6px rgba(0,0,0,.3);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     &.is-active {
@@ -48,7 +50,7 @@
         background-color: var(--card-button-background-opened);
 
         &::before {
-          background: #fff;
+          background: var(--primary-color-1);
           mask-image: var(--card-button-icon-opened);
           mask-size: contain;
           mask-repeat: no-repeat;
@@ -83,7 +85,8 @@
   &__back {
     background: var(--card-back-background);
     color: var(--card-back-color);
-    border: 2px solid var(--primary-color-3);
+    border: 2px solid var(--primary-color-1);
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     padding: var(--card-back-padding);
@@ -106,7 +109,8 @@
     aspect-ratio: 1/1;
     background: var(--card-button-background);
     min-height: var(--card-button-min-height);
-    border: 2px solid var(--primary-color-3);
+    // border: 2px solid var(--primary-color-3);
+    border-radius: 10px;
     margin: calc( -1 * (var(--card-button-min-height) / 2)) auto 0;
     position: relative;
     z-index: 2;
@@ -120,7 +124,7 @@
       content: '';
       width: var(--card-button-icon-width);
       height: var(--card-button-icon-height);
-      background: var(--primary-color-3);
+      background: var(--primary-color-2);
       mask-image: var(--card-button-icon);
       mask-size: contain;
       mask-repeat: no-repeat;

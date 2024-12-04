@@ -39,17 +39,9 @@ export const setSlideshow = function () {
     } catch (e) {
       // Se houver erro no JSON.parse, apenas continua para verificar outros tipos
     }
-
     // Verifica se é uma string booleana e converte para boolean
-    if (data === 'true') {
-      return true;
-    }
-    if (data === 'false') {
-      return false;
-    }
-
     // Retorna a string original se nenhuma das condições anteriores for atendida
-    return data;
+    return /(?=^(true|false)$)/.test(data) ? /true/.test(data) : data;
   }
 
   async function getAttributesAsTypes(attrs) {
@@ -92,7 +84,7 @@ export const setSlideshow = function () {
           600: {
             slidesPerView: attrs.type === 'card' ? 2 : 1,
           },
-          817: {
+          816: {
             slidesPerView: attrs.slidesPerView || 1,
           },
         },

@@ -1,5 +1,42 @@
+@mixin link-da-questao-top-graphism {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 746px;
+    height: auto;
+    aspect-ratio: 756 / 210;
+    max-width: 75%;
+    background: url(/assets/images/wireframe/link-da-questao-graphism-top.png) center/contain no-repeat;
+    left: 50%;
+    top: 0;
+    transform: translate(-60%, -40%);
+    z-index: -1;
+  }
+}
+
+@mixin fica-a-dica-top-graphism {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 770px;
+    height: auto;
+    aspect-ratio: 770 / 136;
+    max-width: 100%;
+    background: url(/assets/images/wireframe/fica-a-dica-graphism-top.svg) center/contain no-repeat;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+}
+
 .educational {
   --gradient-direction: to right;
+  --educational-title-color: var(--primary-color-3);
+  --educational-content-color: var(--primary-color-3);
+  --educational-content-bg: var(--primary-color-1);
+  position: relative;
+
   .content-grid {
     display: flex;
     row-gap: 16px;
@@ -7,40 +44,72 @@
   }
   [class*=__title] {
     margin-top: unset;
-    color: var(--terciary-color-3);
+    color: var(--educational-title-color);
     &+p {
       margin-top: 1rem;
     }
   }
   [class*=__content] {
     position: relative;
-    padding-inline: 32px;
+    padding: 32px;
+    color: var(--educational-content-color);
   }
   img, picture {
     flex:none;
   }
 }
 
-.fica-dica {
+.zoom-no-tema {
+  // --educational-title-color: var(--primary-color-2);
   .content-grid {
-    background: linear-gradient(var(--gradient-direction), transparent 0 125px, var(--primary-color-2) 125px 100%);
+    padding-block: unset;
   }
+  background: var(--educational-content-bg);
 }
 
-.zoom-no-tema {
+.fica-a-dica {
+  background: linear-gradient(to bottom, transparent 0 120px, var(--educational-content-bg) 120px 100%);
+  padding-top: 120px;
+  @include fica-a-dica-top-graphism;
+
+  [class*=__content] {
+    padding: 0 32px 32px;
+  }
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    top:0;
+    transform: translate(-50%, -50%);
+  }
+
   .content-grid {
-    background: linear-gradient(var(--gradient-direction), transparent 0 110px, var(--secondary-color-1) 110px 100%);
+    position: relative;
+    padding-top: 90px;
+    background-color: var(--educational-content-bg);
+    text-align: center;
   }
 }
 
 .link-da-questao {
+  background: linear-gradient(to bottom, transparent 0 90px, var(--educational-content-bg) 90px 100%);
+  padding-top: 90px;
+
+  &__image {
+    position: absolute;
+    right: 15%;
+    top:0;
+    transform: translate(0, -50%);
+  }
+
   .content-grid {
-    background: linear-gradient(var(--gradient-direction), transparent 0 110px, var(--primary-color-1) 110px 100%);
+    position: relative;
+    @include link-da-questao-top-graphism;
   }
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 740px) {
   .educational {
     --gradient-direction: to bottom;
     .content-grid {
@@ -50,4 +119,40 @@
       padding-inline: unset;
     }
   }
+  .zoom-no-tema {
+    [class*=__content] {
+      padding-block: unset;
+      padding: 0 32px 72px;
+    }
+  }
+
+  .link-da-questao {
+    .content-grid::before {
+      background: url(/assets/images/wireframe/link-da-questao-graphism-top-mob.png) center/contain no-repeat;
+    }
+  }
+
+  .fica-a-dica {
+    background: linear-gradient(to bottom, transparent 0 120px, var(--educational-content-bg) 120px 100%);
+    padding-top: 60px;
+    &::before {
+      background: url(/assets/images/wireframe/fica-a-dica-graphism-top-mob.svg) center/contain no-repeat;
+    }
+
+    .content-grid {
+      padding-top: 60px;
+    }
+
+  }
 }
+
+// exemplo para trabalhar com layers
+// @layer tema-1 {
+//   .educational {
+//     background: red;
+//   }
+// }
+
+// .tema-1 {
+//   @layer tema-1;
+// }

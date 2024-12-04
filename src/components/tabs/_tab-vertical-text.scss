@@ -15,6 +15,8 @@
   grid-template-rows: var(--tab-ver-template-rows);
   row-gap: var(--tab-gap);
   column-gap: var(--tab-gap);
+  border-radius: 20px;
+  overflow: hidden;
 
   &__link {
     grid-column: 1;
@@ -23,9 +25,7 @@
     align-items: center;
     justify-content: center;
     border: var( --tab-link-border);
-
     font-weight: bold;
-
     background: var(--tab-link-background);
     color: var(--tab-link-color);
     padding: var(--tab-link-padding);
@@ -46,7 +46,7 @@
     }
 
     &.clicked:not(.is-active) {
-      background: var(--tab-link-background-viewed);
+      // background: var(--tab-link-background-viewed);
     }
   }
 
@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: 816px) {
+@media (max-width: 740px) {
   .tab-ver-text {
     --tab-link-padding: 8px 16px;
     --tab-content-padding: 8px 16px;
@@ -89,6 +89,7 @@
       grid-template-rows: unset;
       transition: unset;
       border: 2px solid #ACACAC;
+      border-radius: 20px;
       filter: unset;
 
       +& {
@@ -98,6 +99,7 @@
       &.is-active {
         width: 100%;
         border: 2px solid #B0FF92;
+        border-radius: 20px 20px 0 0;
         filter: unset;
       }
 
@@ -119,6 +121,7 @@
       filter: unset;
       box-shadow: unset;
       box-shadow: 0px 6px 8px rgba(0,0,0,.3);
+      border-radius: 0 0 20px 20px;
 
       &.is-active {
         display: flex;

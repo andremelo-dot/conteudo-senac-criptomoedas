@@ -1,5 +1,8 @@
 .swiper {
 
+  --swiper-pagination-bottom: 0;
+  --pagination-color: var(--primary-color-1);
+
   :where([class*=-image-left__content],[class*=-image-right__content]) {
     --slider-content-padding: 0 0 24px;
     min-height: 250px;
@@ -11,9 +14,15 @@
     font-size: var(--h6-fs);
   }
 
+  .swiper-pagination-bullet {
+    border: 2px solid var(--pagination-color);
+  }
+
   &-nav {
     button {
-      background: var(--primary-color-1) var(--swiper-actions);
+      mask: var(--swiper-actions);
+      mask-size: contain;
+      background: var(--pagination-color);
       width: var(--swiper-actions-width);
       height: var(--swiper-actions-height);
       border: unset;
@@ -46,8 +55,8 @@
   }
 }
 
-.carrossel-bg {
-  background: var(--primary-color-3);
+.slider-bg {
+  background: var(--primary-color-1);
   padding: 24px;
   color: #fff;
 }

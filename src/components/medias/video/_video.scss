@@ -1,20 +1,25 @@
 // PLYR VIDEO
 .video {
+
+  .plyr {
+    overflow: hidden;
+  }
   // CONFIG VIDEO
   // PLYR VIDEO  CONFIGS
-  --plyr-video-controls-background: var(--primary-color-3);
+  --plyr-video-controls-background: var(--primary-color-1);
   --plyr-video-control-color: #ffffff;
-  --plyr-video-progress-buffered-background: #ffffff;
+  --plyr-video-progress-buffered-background: var(--primary-color-4);
 
-  --plyr-font-size-base: var(--paragraph-size);
-  --plyr-font-size-menu: var(--paragraph-size);
-  --plyr-font-size-time: var(--paragraph-size);
+  --plyr-font-size-base: var(--paragraph-fs);
+  --plyr-font-size-menu: var(--paragraph-fs);
+  --plyr-font-size-time: var(--paragraph-fs);
 
-  --plyr-video-control-background-hover: var(--primary-color-1);
-  --plyr-menu-color: #fff;
-  --plyr-menu-background: var(--primary-color-3);
+  --plyr-video-control-background-hover: var(--primary-color-2);
+  --plyr-menu-color: var(--primary-color-1);
+  --plyr-control-toggle-checked-background: var(--primary-color-1);
+  --plyr-menu-background: var(--primary-color-2);
   --plyr-range-track-height: 8px;
-  --plyr-range-fill-background: var(--primary-color-1);
+  --plyr-range-fill-background: #fff;
   --plyr-range-thumb-background: transparent;
   --plyr-range-thumb-shadow: 0px;
   // --plyr-control-spacing: 16px;
@@ -23,7 +28,8 @@
   &__transcription {
     margin-top: 16px;
     padding: 16px;
-    border: 2px solid var(--primary-color-3);
+    border: 2px solid var(--primary-color-1);
+    border-radius: 20px;
 
     .video__content {
       height: 200px;
@@ -32,6 +38,7 @@
 }
 
 .plyr {
+  border-radius: 20px;
   &__video-wrapper {
     --aspect-ratio: 16/9;
     --controls-height: 80px;
@@ -40,7 +47,7 @@
   }
 }
 
-@media (max-width: 816px) {
+@media (max-width: 740px) {
   .plyr {
     --plyr-control-video-play-width: 32px;
     --plyr-control-video-play-height: 32px;

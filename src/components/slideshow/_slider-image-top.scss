@@ -16,6 +16,7 @@
     color: #fff;
     padding: var(--slider-content-padding);
     text-align: var(--slider-content-text-align);
+    border-radius: 10px;
   }
 
   &__nav {
@@ -45,7 +46,7 @@
   }
 }
 
-@media (max-width: 816px) {
+@media (max-width: 740px) {
   .slider-image-top {
     --slider-content-padding: 16px;
   }

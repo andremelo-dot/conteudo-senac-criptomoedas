@@ -1,5 +1,7 @@
 .featured {
 
+  padding-top: 60px;
+
   &__title {
     margin-top: unset;
     &+p {
@@ -7,14 +9,26 @@
     }
   }
 
+  &__ico {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 1;
+  }
+
   &__content {
     position: relative;
     padding: var(--element-spacing);
     padding-block: 48px;
-    background: var(--primary-color-3);
+    background: url(/assets/images/wireframe/destaque-graphism.png) center / cover no-repeat;
+    border-radius: 10px;
+    p:first-of-type {
+      margin-top: unset;
+    }
   }
   &__content::before {
-    content:'';
+    // content:'';
     position: absolute;
     left: 0;
     top: 50%;
@@ -30,7 +44,7 @@
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 740px) {
   .featured {
     &__content::before {
       mask-image: url(/assets/images/wireframe/featured-side-mob.svg);

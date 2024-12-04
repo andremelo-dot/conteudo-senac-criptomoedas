@@ -5,33 +5,25 @@
 }
 
 body {
-  font-size: var(--paragraph-size);
+  font-size: var(--paragraph-fs);
   line-height: var(--paragraph-lh);
   font-family: var(--font-family);
   background: #fff;
-  color: #5C2D25;
+  color: #232323;
 }
 
 footer {
-  height: 90px;
-  overflow: hidden;
-  background: var(--primary-color-1);
-  position: relative;
-  img {
-    position: absolute;
-    transform: translate(20%, -15%);
-    right: 0;
-  }
+
 }
 
 p,
 li {
-  font-size: var(--paragraph-size);
+  font-size: var(--paragraph-fs);
   line-height: var(--paragraph-lh);
 }
 
 .link {
-  color: var(currentColor, --primary-color-3);
+  color: var(currentColor, --primary-color-1);
 }
 
 h1,
@@ -41,7 +33,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
-  color: var(--secondary-color-3)
+  color: var(--primary-color-1)
 }
 
 h1,h2,h3,h4,h5 {
@@ -124,7 +116,7 @@ button {
 .list-bullet {
   --list-bullet-width: min(8px, 1ch);
   li {
-    margin-left: var(--paragraph-size);
+    margin-left: var(--paragraph-fs);
   }
   li::before {
     content: '';
@@ -218,6 +210,11 @@ button {
   --this-color: var(--primary-color-3);
 }
 
+.bg-primary-4 {
+  background-color: var(--primary-color-4);
+  --this-color: var(--primary-color-4);
+}
+
 .bg-secondary-1 {
   background-color: var(--secondary-color-1);
   --this-color: var(--secondary-color-1);
@@ -226,15 +223,16 @@ button {
 .bg-secondary-2 {
   background-color: var(--secondary-color-2);
   --this-color: var(--secondary-color-2);
-
-  &.--opacity-075 {
-    background-color: rgba(#CD5BE8, 0.075);
-  }
 }
 
 .bg-secondary-3 {
   background-color: var(--secondary-color-3);
   --this-color: var(--secondary-color-3);
+}
+
+.bg-secondary-4 {
+  background-color: var(--secondary-color-4);
+  --this-color: var(--secondary-color-4);
 }
 
 .bg-pseudo-primary-1::before {
@@ -249,6 +247,10 @@ button {
   background-color: var(--primary-color-3);
 }
 
+.bg-pseudo-primary-4::before {
+  background-color: var(--primary-color-4);
+}
+
 .bg-pseudo-secondary-1::before {
   background-color: var(--secondary-color-1);
 }
@@ -259,6 +261,10 @@ button {
 
 .bg-pseudo-secondary-3::before {
   background-color: var(--secondary-color-3);
+}
+
+.bg-pseudo-secondary-4::before {
+  background-color: var(--secondary-color-4);
 }
 
 .bg-gradient-double {
@@ -310,7 +316,7 @@ SCROLL AREA
 
 }
 
-@container content-scroll-x (width < 900px) {
+@container content-scroll-x (width < 816px) {
 
   .content-scroll-x {
     img {
@@ -332,20 +338,20 @@ SCROLL AREA
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: #fff;
+    background: var(--primary-color-3);
     border-radius: 8px;
     padding: 2px;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color-2);
+    background-color: var(--primary-color-1);
     border-radius: 8px;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color-1);
+    background: var(--primary-color-2);
   }
 }
 
@@ -376,7 +382,6 @@ SCROLL AREA
 
   .color-palette span::before {
     content: '';
-    transform: skew(var(--skew));
     width: 100%;
     height: 100%;
     position: absolute;
@@ -421,7 +426,7 @@ SCROLL AREA
     left: 50%;
     background: var(--bg-linear-gradient-double);
     background-repeat: no-repeat;
-    transform: skew(var(--skew)) translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     transform-origin: top;
     z-index: -1;
   }
@@ -429,7 +434,12 @@ SCROLL AREA
 
 /*******************************************/
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 740px) {
+
+  main, header {
+    overflow: hidden;
+  }
+
   :where([class^=img-max-],
   [class^=img-min-],
   [class^=ico-max-],
