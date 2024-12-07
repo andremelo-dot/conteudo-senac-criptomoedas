@@ -29,7 +29,7 @@
       border-color: #fff;
 
       &::before {
-        background: #fff;
+        background: var(--primary-color-2);
       }
 
       & + .question-label {

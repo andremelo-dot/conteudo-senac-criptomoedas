@@ -23,7 +23,7 @@ li {
 }
 
 .link {
-  color: var(currentColor, --primary-color-1);
+  color: currentColor;
 }
 
 h1,
@@ -115,6 +115,7 @@ button {
 
 .list-bullet {
   --list-bullet-width: min(8px, 1ch);
+
   li {
     margin-left: var(--paragraph-fs);
   }
@@ -124,7 +125,7 @@ button {
     width: var(--list-bullet-width);
     height: auto;
     aspect-ratio: 1/1;
-    background: var(--lists-color);
+    background: currentColor;
     border-radius: 2px;
     margin-right: 1ch;
   }
@@ -133,9 +134,9 @@ button {
     margin-bottom: calc(var(--paragraph-spacing) / 2);
     li {
       &::before {
-        border: 2px solid var(--lists-color);
+        border: 2px solid currentColor;
         border-style: inset;
-        background: #fff;
+        background: currentColor;
         width: calc(var(--list-bullet-width) - 2px);
       }
     }

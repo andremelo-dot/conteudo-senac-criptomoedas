@@ -50,4 +50,5 @@ export const setTabs = function () {
     currentLink.addClass('is-active clicked');
     currentTab.find('.tab-content-item').filter(`[data-content-id="${navId}"]`).addClass('is-active');
   });
+  $('.tab .tab-link:first-of-type').click();
 };

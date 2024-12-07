@@ -131,7 +131,7 @@ export const saveQuestion = function (data) {
 
       // Query que retorna o index referente a questão.
       index = options.actv.findIndex(element => element.id === questionData.id);
-
+      console.log('options.actv', options.actv)
       // Extração dos dados atuais das tentativas.
       let [attemptsCount, attemptsTotal] = options.actv[index].atpt;
       let [progress] = options.actv[index].stat;

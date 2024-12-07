@@ -22,6 +22,7 @@ import { setQuestionMinmax } from '@components/question-minmax';
 import { setQuestionAssociative } from '@components/question-associative';
 import { setQuestionDragAndDrop } from '@components/question-drag-and-drop';
 import { setVideoViewQuestion } from '@components/question-video-view';
+
 import { handleMenu, handleMenuNav } from '@components/menu';
 import { setTimelineCustom } from '@components/timeline-custom';
 

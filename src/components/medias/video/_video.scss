@@ -1,6 +1,6 @@
+
 // PLYR VIDEO
 .video {
-
   .plyr {
     overflow: hidden;
   }
@@ -36,6 +36,22 @@
     }
   }
 }
+
+[class*=media-player] {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 20px;
+
+  .iframe-video {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
 
 .plyr {
   border-radius: 20px;

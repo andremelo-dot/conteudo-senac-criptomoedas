@@ -33,16 +33,32 @@ export const setMedias = function () {
   }
 };
 
+
+
 export const setCustomPlyr = function () {
   const settings = {
     storage: { enabled: false },
     speed: { selected: 1 },
     volume: 0.5
   }
-  var players = Plyr.setup('.media-player-view', settings);
 
-  if (players) {
-    players.forEach(function (player) {
+  var nodePlayers = document.querySelectorAll('.media-player-view');
+
+  let players = []
+  if (nodePlayers.length) {
+    const setPlayer = (playerWrapper, index) => {
+
+      const isBunny = $(playerWrapper).data('plyr-provider') == "bunny";
+      let player = null;
+      if (isBunny) {
+        let iframe = playerWrapper.querySelector('iframe');
+        iframe.id = `bunny-stream-embed-${index}`
+        player = new playerjs.Player(iframe)
+      } else {
+        player = new Plyr(playerWrapper, settings);
+      }
+
+      players.push(player)
       player.volume = 0.5;
       const handlePlay = function (e) {
         var others = players.filter(other => other != player)
@@ -51,24 +67,33 @@ export const setCustomPlyr = function () {
         })
       }
 
-      const handleTimeUpdate = function({target}){
+      const handlePlayerTime = function(data){
+        let target = data.target ? data.target : playerWrapper;
         let $closestQuestion = $(target).closest('.question');
+        
         let viewPercent = $closestQuestion.attr('data-required-view') ?? 70;
-        let playerCurrentTimePercent = (player.currentTime / player.duration) * 100;
-        if (playerCurrentTimePercent >= +viewPercent) {
+        let currentTime = data.seconds || player.currentTime;
+        let duration = data.duration || player.duration;
+        let playerCurrentTimePercent = (currentTime / duration) * 100;
+        console.log('playerCurrentTimePercent', data, playerCurrentTimePercent, viewPercent)
+        if (playerCurrentTimePercent >= +viewPercent && !$closestQuestion.hasClass('viewed')) {
           $closestQuestion.addClass('viewed');
           $closestQuestion.trigger('answered');
+          alert('finishou')
         }
       }
 
-      player.on('ready', ()=>{
-        player.on('timeupdate', handleTimeUpdate)
+      player.on('ready', () => {
+        player.on('timeupdate', handlePlayerTime);
       })
 
       player.on('play', handlePlay);
-      
-    });
+    }
+
+    nodePlayers.forEach(setPlayer);
   }
+
+
 };
 
 export const handlePodcastSubtitles = function () {

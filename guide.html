@@ -14,7 +14,7 @@
   <main id="main">
     <span id="guide" style="display: none;"><!--REMOVER ESTE ELEMENTO. UTILIZADO APENAS NO GUIA--></span>
 
-    <header class="header" data-compoment="cabeçalho imagem">
+    <header class="header" data-compoment="cabecalho imagem">
       <div class="content-grid">
         <div class="header__image">
           <picture data-template="true" data-template-type="image">
@@ -438,11 +438,174 @@
       </div>
 
       <div class="content-grid">
-        <h2>Flashcard</h2>
+        <h2>Carrossel imagem fixa</h2>
+      </div>
+      <div data-component="Carrossel">
+        <div class="content-grid slider_wrapper">
+          <picture>
+            <source media="(max-width: 768px)" srcset="./assets/images/fke/fke-slider.png" />
+            <img src="/assets/images/fke/fke-slider.png" alt="" />
+          </picture>
+          <div class="swiper slider carrossel-image-top" data-type="carrossel" data-auto-height="true"
+            data-pagination-type="fraction">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide carrossel-image-top__slide" data-template="true">
+                <div class="carrossel-image-top__content" data-template-type="text">
+                  <p>
+                    Sed ultrices varius ligula. Etiam eleifend libero lectus, ac faucibus elit viverra tincidunt. Nulla
+                    condimentum massa
+                    blandit varius commodo. Aenean faucibus convallis pretium. Aenean dolor elit, malesuada malesuada
+                    dolor a, dapibus
+                    feugiat ipsum. Ut sit amet est eros. Nunc a finibus urna, in pharetra magna. Cras risus dui, iaculis
+                    finibus diam sed,
+                    pharetra laoreet libero. Nulla dictum euismod lacus, vitae porta tellus feugiat consequat. Nullam
+                    tempus felis non
+                    urna rutrum, non ultricies ligula sollicitudin. Fusce facilisis leo sit amet est posuere, sed
+                    molestie lorem
+                    tincidunt. Morbi bibendum congue sagittis. Vivamus sed tortor mauris. Duis vestibulum ac metus a
+                    rhoncus. Fusce
+                    tristique quam in condimentum consequat. Sed sollicitudin metus id pulvinar malesuada.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide carrossel-image-top__slide" data-template="false">
+                <div class="carrossel-image-top__content">
+                  <p>
+                    Sed ultrices varius ligula. Etiam eleifend libero lectus, ac faucibus elit viverra tincidunt. Nulla
+                    condimentum massa
+                    blandit varius commodo. Aenean faucibus convallis pretium. Aenean dolor elit, malesuada malesuada
+                    dolor a, dapibus
+                    feugiat ipsum. Ut sit amet est eros. Nunc a finibus urna, in pharetra magna. Cras risus dui, iaculis
+                    finibus diam sed,
+                    pharetra laoreet libero. Nulla dictum euismod lacus, vitae porta tellus feugiat consequat. Nullam
+                    tempus felis non
+                    urna rutrum, non ultricies ligula sollicitudin. Fusce facilisis leo sit amet est posuere, sed
+                    molestie lorem
+                    tincidunt. Morbi bibendum congue sagittis. Vivamus sed tortor mauris. Duis vestibulum ac metus a
+                    rhoncus. Fusce
+                    tristique quam in condimentum consequat. Sed sollicitudin metus id pulvinar malesuada.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide carrossel-image-top__slide" data-template="false">
+                <div class="carrossel-image-top__content">
+                  <p>
+                    Sed ultrices varius ligula. Etiam eleifend libero lectus, ac faucibus elit viverra tincidunt. Nulla
+                    condimentum massa
+                    blandit varius commodo. Aenean faucibus convallis pretium. Aenean dolor elit, malesuada malesuada
+                    dolor a, dapibus
+                    feugiat ipsum. Ut sit amet est eros. Nunc a finibus urna, in pharetra magna. Cras risus dui, iaculis
+                    finibus diam sed,
+                    pharetra laoreet libero. Nulla dictum euismod lacus, vitae porta tellus feugiat consequat. Nullam
+                    tempus felis non
+                    urna rutrum, non ultricies ligula sollicitudin. Fusce facilisis leo sit amet est posuere, sed
+                    molestie lorem
+                    tincidunt. Morbi bibendum congue sagittis. Vivamus sed tortor mauris. Duis vestibulum ac metus a
+                    rhoncus. Fusce
+                    tristique quam in condimentum consequat. Sed sollicitudin metus id pulvinar malesuada.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-nav carrossel-image-top__nav">
+              <button class="swiper-button-prev carrossel-image-top__prev"></button>
+              <div class="swiper-pagination carrossel-image-top__pagination"></div>
+              <button class="swiper-button-next carrossel-image-top__next"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <h2>Slider variavel imagem esquerda</h2>
+      </div>
+
+      <div class="slider-wrapper" data-component="slide">
+        <div class="content-grid slider-bg">
+          <div class="swiper slider-image-left" data-pagination-type="bullets" data-auto-height="true">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider-image-left__slide" data-template="true">
+                <picture data-template-type="image">
+                  <source media="(max-width: 740px)" srcset="./assets/images/fke/fke-slide.png" />
+                  <img src="/assets/images/fke/fke-slide.png" alt="" />
+                </picture>
+
+                <div class="slider-image-left__content" data-template-type="text">
+                  <p>
+                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
+                    hendrerit lectus.
+                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
+                    velit sed condimentum
+                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
+                    consequat
+                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
+                  </p>
+                  <p>
+                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
+                    hendrerit lectus.
+                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
+                    velit sed condimentum
+                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
+                    consequat
+                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-image-left__slide" data-template="false">
+                <picture>
+                  <source media="(max-width: 740px)" srcset="./assets/images/fke/fke-slide.png" />
+                  <img src="/assets/images/fke/fke-slide.png" alt="" />
+                </picture>
+
+                <div class="slider-image-left__content">
+                  <p>
+                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
+                    hendrerit lectus.
+                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
+                    velit sed condimentum
+                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
+                    consequat
+                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-image-left__slide" data-template="false">
+                <picture>
+                  <source media="(max-width: 740px)" srcset="./assets/images/fke/fke-slide.png" />
+                  <img src="/assets/images/fke/fke-slide.png" alt="" />
+                </picture>
+
+                <div class="slider-image-left__content">
+                  <p>
+                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
+                    hendrerit lectus.
+                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
+                    velit sed condimentum
+                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
+                    consequat
+                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-nav slider-image-left__nav">
+              <button class="swiper-button-prev slider-image-left__prev"></button>
+              <div class="swiper-pagination slider-image-left__pagination"></div>
+              <button class="swiper-button-next slider-image-left__next"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <h2>Flashcard imagem titulo</h2>
         <p>O flashcard pode ser utilizado com ou sem título, porém a imagem precisa estar adequada ao tamanho do card.</p>
       </div>
 
-      <div data-component="flashcard imagem">
+      <div data-component="flashcard imagem titulo">
         <div class="content-grid">
           <div class="swiper flashcard-image" data-type="card" data-slides-per-view="3" data-space-between="32" data-pagination-type="bullets">
             <div class="swiper-wrapper">
@@ -586,7 +749,7 @@
       </div>
 
       <!-- Neste recurso são utilizadas imagens com título -->
-      <div class="content-grid" data-component="card ícone">
+      <div class="content-grid" data-component="flashcard imagem">
         <div class="swiper flashcard-image" data-type="card" data-slides-per-view="3" data-space-between="32" data-pagination-type="bullets">
           <div class="swiper-wrapper">
             <div class="swiper-slide flashcard-image__slide" data-template="true">
@@ -645,90 +808,6 @@
       </div>
 
       <div class="content-grid">
-        <h2>Slider variavel imagem esquerda</h2>
-      </div>
-
-      <div class="slider-wrapper" data-component="slide">
-        <div class="content-grid slider-bg">
-          <div class="swiper slider-image-left" data-pagination-type="bullets" data-auto-height="true">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slider-image-left__slide" data-template="true">
-                <picture data-template-type="image">
-                  <source media="(max-width: 740px)" srcset="./assets/images/fke/fke-slide.png" />
-                  <img src="/assets/images/fke/fke-slide.png" alt="" />
-                </picture>
-
-                <div class="slider-image-left__content" data-template-type="text">
-                  <p>
-                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
-                    hendrerit lectus.
-                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
-                    velit sed condimentum
-                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
-                    consequat
-                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
-                  </p>
-                  <p>
-                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
-                    hendrerit lectus.
-                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
-                    velit sed condimentum
-                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
-                    consequat
-                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide slider-image-left__slide" data-template="false">
-                <picture>
-                  <source media="(max-width: 740px)" srcset="./assets/images/fke/fke-slide.png" />
-                  <img src="/assets/images/fke/fke-slide.png" alt="" />
-                </picture>
-
-                <div class="slider-image-left__content">
-                  <p>
-                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
-                    hendrerit lectus.
-                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
-                    velit sed condimentum
-                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
-                    consequat
-                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide slider-image-left__slide" data-template="false">
-                <picture>
-                  <source media="(max-width: 740px)" srcset="./assets/images/fke/fke-slide.png" />
-                  <img src="/assets/images/fke/fke-slide.png" alt="" />
-                </picture>
-
-                <div class="slider-image-left__content">
-                  <p>
-                    Maecenas eu laoreet arcu. Aenean non dignissim orci, varius ultricies sem. Nulla facilisi. Duis et
-                    hendrerit lectus.
-                    Etiam et nisi et metus egestas cursus mattis id lectus. Phasellus nec dolor lacus. Sed feugiat,
-                    velit sed condimentum
-                    mollis, dui mauris fermentum diam, vitae auctor magna nisl sed turpis. Nam venenatis lectus vel sem
-                    consequat
-                    condimentum. Nulla hendrerit elementum felis, eget aliquet ipsum Aliquet.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-nav slider-image-left__nav">
-              <button class="swiper-button-prev slider-image-left__prev"></button>
-              <div class="swiper-pagination slider-image-left__pagination"></div>
-              <button class="swiper-button-next slider-image-left__next"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-grid">
         <h1>Recursos audiovisuais</h1>
         <h2>Vídeo</h2>
       </div>
@@ -752,13 +831,37 @@
 
       <div class="content-grid">
         <h2>Vídeo iframe para o moodle</h2>
+        <p></p>
       </div>
 
       <div data-component="Vídeo">
         <div class="content-grid">
           <div class="video question" data-type="video" data-required-view="70">
+            <div class="media-player-view" data-plyr-provider="bunny">
+              <!-- manter este elemento como está, alterando apenas o src -->
+              <iframe class="iframe-video" id="" src="https://iframe.mediadelivery.net/embed/197133/dc48a09e-d9bb-420a-83d7-72dc2304c034" frameborder="0"></iframe>
+            </div>
 
-            <iframe src="https://player.vimeo.com/video/235215203?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write;" style="display:block;width:100%;height:100%;aspect-ratio:16 / 9;" title="Vimeo Placeholder" ></iframe>
+            <div class="video__transcription">
+              <div class="video__content content-scroll-y">
+                <p data-template="true" data-template-type="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita perferendis rem voluptate voluptatibus, aperiam illum, libero ducimus quis culpa velit, qui dignissimos tenetur sint asperiores neque molestiae doloribus quae modi.</p>
+                <p data-template="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ducimus labore fugiat commodi blanditiis? Quia, error! Dicta, quod optio fugit nostrum error culpa sit, a blanditiis, rerum non ducimus dolorum?</p>
+                <p data-template="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita perferendis rem voluptate voluptatibus, aperiam illum, libero ducimus quis culpa velit, qui dignissimos tenetur sint asperiores neque molestiae doloribus quae modi.</p>
+                <p data-template="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ducimus labore fugiat commodi blanditiis? Quia, error! Dicta, quod optio fugit nostrum error culpa sit, a blanditiis, rerum non ducimus dolorum?</p>
+                <p data-template="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita perferendis rem voluptate voluptatibus, aperiam illum, libero ducimus quis culpa velit, qui dignissimos tenetur sint asperiores neque molestiae doloribus quae modi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-component="Vídeo">
+        <div class="content-grid">
+          <div class="video question" data-type="video" data-required-view="70">
+            <div class="media-player-view" data-plyr-provider="bunny">
+              <!-- manter este elemento como está, alterando apenas o src -->
+              <iframe class="iframe-video" id="" src="https://iframe.mediadelivery.net/embed/197133/dc48a09e-d9bb-420a-83d7-72dc2304c034" frameborder="0"></iframe>
+            </div>
 
             <div class="video__transcription">
               <div class="video__content content-scroll-y">
@@ -828,7 +931,7 @@
         <h2>tab horizontal só texto</h2>
       </div>
 
-      <div data-component="tab horizontal">
+      <div data-component="tabs horizontal">
         <div class="content-grid">
           <div class="tab tab-hor-text" data-type="horizontal">
             <a href="" class="tab-link tab-hor-text__link is-active clicked" data-template="true" data-template-type="title">Lorem ipsum
@@ -893,7 +996,7 @@
         <h2>tab vertical só texto</h2>
       </div>
 
-      <div data-component="tab vertical">
+      <div data-component="tabs vertical">
         <div class="content-grid">
           <div class="tab tab-ver-text" data-type="vertical">
             <a href="" class="tab-link tab-ver-text__link is-active clicked" data-template="true" data-template-type="title">Lorem ipsum dolor integer in lorem dapibus
@@ -1101,6 +1204,24 @@
           </picture>
           <div class="link-da-questao__content" data-template="true">
             <h4 class="link-da-questao__title">LINK DA QUESTÃO</h4>
+            <p data-template-type="text">Mauris tempor nisi nec tellus rhoncus auctor. Proin a velit dictum lorem luctus ornare non tincidunt libero. Quisque accumsan augue dui, vitae tempus lorem tempus vitae. Fusce neque eros, Quisque accumsan augue dui, vitae tempus lorem tempus vitae.Quisque accumsan augue dui, vitae tempus lorem tempus.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <h2>Referências bibliograficas</h2>
+      </div>
+
+      <!-- styles: components/educationals/_various.scss -->
+      <div class="educational referencias" data-component="referencias bibliograficas">
+        <div class="content-grid">
+          <picture class="referencias__image">
+            <source media="(max-width: 740px)" srcset="./assets/images/wireframe/referencias-mob.svg" />
+            <img src="/assets/images/wireframe/referencias.svg" alt="" />
+          </picture>
+          <div class="referencias__content" data-template="true">
+            <h4 class="referencias__title">REFERÊNCIAS</h4>
             <p data-template-type="text">Mauris tempor nisi nec tellus rhoncus auctor. Proin a velit dictum lorem luctus ornare non tincidunt libero. Quisque accumsan augue dui, vitae tempus lorem tempus vitae. Fusce neque eros, Quisque accumsan augue dui, vitae tempus lorem tempus vitae.Quisque accumsan augue dui, vitae tempus lorem tempus.</p>
           </div>
         </div>
@@ -1356,6 +1477,7 @@
   </footer>
 
   <script src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/player-0.1.0.min.js"></script>
   <script type="module" src="/src/scripts/main.js"></script>
 </body>
 

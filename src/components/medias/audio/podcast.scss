@@ -1,3 +1,7 @@
+.plyr--audio .plyr__controls {
+  border-radius: 100px!important;
+}
+
 // ESTILO DO PODCAST 2
 .podcast {
   // PLYR AUDIO CONFIGS
@@ -90,8 +94,7 @@
           max-width: var(--plyr-podcast1-audio-maxwidth);
           width: 100%;
 
-          &__controls {
-            border-radius: 100px;
+          .plyr__controls {
 
             [data-plyr='play'] {
               background: var(--plyr-control-audio-play-background);

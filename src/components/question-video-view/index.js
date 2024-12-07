@@ -36,6 +36,7 @@ export const setVideoViewQuestion = function () {
       stat: [1, 1],
       scor: [1, 1, 100],
     };
+    console.log('questionData', questionData)
     saveQuestion(questionData);    
   });
 };
